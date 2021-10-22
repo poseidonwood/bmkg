@@ -25,7 +25,7 @@
             <li><i class="fa fa-angle-right"></i><a href="http://maritimjatim.info/" target="_blank">Stasiun Meteorologi Maritim Perak Surabaya</a></li>
             <li><i class="fa fa-angle-right"></i><a href="http://meteobanyuwangi.info/" target="_blank">Stasiun Meteorologi Banyuwangi</a></li>
             <li><i class="fa fa-angle-right"></i><a href="http://stametbawean.com/" target="_blank">Stasiun Meteorologi Sangkapura Bawean</a></li>
-            <li><i class="fa fa-angle-right"></i><a href="http://stametbawean.com/" target="_blank">Dashboard</a></li>
+            <li><i class="fa fa-angle-right"></i><a href="<?= $base_url."dashboard";?>" target="_blank">Dashboard</a></li>
 
           </div>
 
@@ -72,7 +72,7 @@
           <div class="col-md-3 col-sm-6 md-margin-bottom-30">
             <script type="text/javascript" src="https://freehitcounters.org/count/9mc4"></script><br>
             <a href='http://www.counter-zaehler.de'>blogspot besucherzähler</a> <script type='text/javascript' src='https://whomania.com/ctr?id=4c07a00c499023a0d4f953855af5de0eb540831a'></script>
-            <?= $base_url;?>
+
           </div>
         </div>
       </div>
