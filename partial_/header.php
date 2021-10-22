@@ -47,7 +47,7 @@ include "./config/function.php";
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:300,300i,400,400i,700,700i">
   <link rel="stylesheet" href="https://www.bmkg.go.id/asset/plugins/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://www.bmkg.go.id/asset/plugins/fancybox/source/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="./asset/css/fontawesome.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://www.bmkg.go.id/asset/css/thunderstorm.css">
   <link rel="stylesheet" href="https://www.bmkg.go.id/asset/css/thrustfault.css">
 
