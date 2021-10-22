@@ -42,12 +42,20 @@
               </div>
             </div>
             <hr>
-            <ul class="social-icon-list">
-              <li><a href="https://twitter.com/infoBMKG" target="_blank"><i class="rounded-x fa fa-twitter"></i></a></li>
-              <li><a href="https://www.facebook.com/infoBMKG" target="_blank"><i class="rounded-x fa fa-facebook"></i></a></li>
-              <li><a href="https://www.instagram.com/infoBMKG" target="_blank"><i class="rounded-x fa fa-instagram"></i></a></li>
-              <li><a href="https://www.youtube.com/infoBMKG" target="_blank"><i class="rounded-x fa fa-youtube"></i></a></li>
-            </ul>
+            <div class="row">
+              <div class="col-xs-3">
+                <a href="https://twitter.com/bmkgtuban" target="_blank"><i class="fa fa-twitter-square"></i></a>
+              </div>
+              <div class="col-xs-3">
+                <a href="https://www.facebook.com/bmkgtuban" target="_blank"><i class="fa fa-facebook-square"></i></a>
+              </div>
+              <div class="col-xs-3">
+                <a href="https://www.instagram.com/bmkgtuban/" target="_blank"><i class="fa fa-instagram"></i></a>
+              </div>
+              <div class="col-xs-3">
+                <a href="https://www.youtube.com/channel/UCLU0FxwCDLLsd1YW1lmOGVQ" target="_blank"><i class="fa fa-youtube-square"></i></a>
+              </div>
+            </div>
           </div>
 
           <div class="col-md-3 col-sm-6 md-margin-bottom-30">

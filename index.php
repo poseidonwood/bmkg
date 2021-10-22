@@ -13,10 +13,10 @@ include "./partial_/navbar.php";
             <div class="owl-navigation">
               <div class="customNavigation">
                 <a class="owl-btn prev-pk">
-                  <h3>←</h3>
+                  <h3><i class="fa fa-angle-left"></i></h3>
                 </a>
                 <a class="owl-btn next-pk">
-                  <h3>→</h3>
+                  <h3><i class="fa fa-angle-right"></i></h3>
                 </a>
               </div>
             </div>
