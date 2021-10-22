@@ -33,8 +33,6 @@
 
           <div class="col-md-3 col-sm-6 md-margin-bottom-30">
             <h2>Aplikasi Mobile</h2>
-            <h4><a href="http://apps.bmkg.go.id" target="_blank">Info BMKG - Cuaca, Iklim, dan Gempabumi Indonesia</a></h4>
-            <p>Semua informasi mengenai Prakiraan Cuaca, Iklim, Kualitas Udara, dan Gempabumi yang terjadi di berbagai wilayah di Indonesia tercakup dalam satu aplikasi mobile.</p>
             <div class="row">
               <div class="col-xs-6">
                 <a href="https://itunes.apple.com/id/app/id1114372539?l=id" target="_blank"><img class="img-responsive" src="https://www.bmkg.go.id/asset/img/logo/appstore.png" alt="infoBMKG on App Store"></a>
