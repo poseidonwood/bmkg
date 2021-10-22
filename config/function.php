@@ -1,5 +1,6 @@
 <?php
 date_default_timezone_set("Asia/Jakarta");
+
 function tanggal_indo($tanggal, $cetak_hari = false)
 {
   $hari = array(
