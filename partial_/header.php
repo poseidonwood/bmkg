@@ -36,13 +36,7 @@ include "./config/function.php";
   <meta name="apple-itunes-app" content="app-id=1114372539">
   <meta name="google-play-app" content="app-id=com.Info_BMKG">
 
-  <link rel="shortcut icon" href="https://www.bmkg.go.id/asset/img/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="https://www.bmkg.go.id/asset/img/favicon-60@3x.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="https://www.bmkg.go.id/asset/img/favicon-60.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="https://www.bmkg.go.id/asset/img/favicon-60@2x.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="https://www.bmkg.go.id/asset/img/favicon-60@3x.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="https://www.bmkg.go.id/asset/img/favicon-76.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="https://www.bmkg.go.id/asset/img/favicon-76@2x.png" />
+  <link rel="shortcut icon" href="./asset/images/favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:300,300i,400,400i,700,700i">
   <link rel="stylesheet" href="https://www.bmkg.go.id/asset/plugins/bootstrap/css/bootstrap.min.css">
