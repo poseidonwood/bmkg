@@ -45,9 +45,9 @@ include "./config/function.php";
   <link rel="apple-touch-icon" sizes="152x152" href="https://www.bmkg.go.id/asset/img/favicon-76@2x.png" />
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:300,300i,400,400i,700,700i">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://www.bmkg.go.id/asset/plugins/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://www.bmkg.go.id/asset/plugins/fancybox/source/jquery.fancybox.min.css">
-  <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+  <link href="https://www.bmkg.go.id/asset/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://www.bmkg.go.id/asset/css/thunderstorm.css">
   <link rel="stylesheet" href="https://www.bmkg.go.id/asset/css/thrustfault.css">
 
