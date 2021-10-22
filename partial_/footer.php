@@ -60,7 +60,8 @@
             ?>
           </div>
           <div class="col-md-3 col-sm-6 md-margin-bottom-30">
-            <script type="text/javascript" src="https://freehitcounters.org/count/9mc2"></script><br><script type='text/javascript' src='https://www.whomania.com/ctr?id=93e7016917102315e378d03ac851221131def1d2'></script>
+            <script type="text/javascript" src="https://freehitcounters.org/count/9mc4"></script><br>
+            <a href='http://www.counter-zaehler.de'>blogspot besucherzähler</a> <script type='text/javascript' src='https://whomania.com/ctr?id=4c07a00c499023a0d4f953855af5de0eb540831a'></script>
           </div>
         </div>
       </div>
