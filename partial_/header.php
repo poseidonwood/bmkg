@@ -1,6 +1,8 @@
 <?php
+include "./config/koneksi.php";
 include "./config/getdata.php";
 include "./config/function.php";
+
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="id" class="ie8"> <![endif]-->

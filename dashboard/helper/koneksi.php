@@ -29,4 +29,4 @@ $isSSL = function () {
 $prot = $isSSL() ? 'https://' : 'http://';
 // $config['base_url'] = $prot . $host . "/";
 $base_url  = $prot . $_SERVER['HTTP_HOST'] .
-  str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
+  str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME'])."dashboard/auth/login.php";
