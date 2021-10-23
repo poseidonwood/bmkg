@@ -106,10 +106,10 @@ require_once('../templates/header.php');
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                 User Terdaftar</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= countDB("nomor") ?></div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= countDB("account") ?></div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-phone fa-2x text-gray-300"></i>
+                            <i class="fas fa-users fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -123,12 +123,12 @@ require_once('../templates/header.php');
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                Whatsapp Terkirim</div>
+                                Jumlah Postingan</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                <?= countDB("pesan", "status", "TERKIRIM") ?></div>
+                                <?= countDB("post") ?></div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                            <i class="fas fa-sticky-note fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -195,7 +195,7 @@ require_once('../templates/header.php');
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; <a href="https://web.facebook.com/menz.pedia.96/">mnzcreate</a></span>
+            <span>Copyright &copy; <a href="https://wa.me/6282140647578">Febri Kukuh</a></span>
 
         </div>
     </div>

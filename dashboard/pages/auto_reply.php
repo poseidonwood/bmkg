@@ -131,7 +131,7 @@ require_once('../templates/header.php');
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; <a href="https://web.facebook.com/menz.pedia.96/">mnzcreate</a></span>
+            <span>Copyright &copy; <a href="https://wa.me/6282140647578">Febri Kukuh</a></span>
         </div>
     </div>
 </footer>
@@ -196,11 +196,11 @@ require_once('../templates/header.php');
                     <br>
                     <label> Media </label>
                         <input type="file" name="media" class="form-control">
-                    <p class="text-small text-danger">*support jpg only 
+                    <p class="text-small text-danger">*support jpg only
                     <label> Response </label>
                     <textarea name="response" class="form-control" required></textarea>
                     <br>
-                  
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

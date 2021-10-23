@@ -12,15 +12,17 @@ if (post("username")) {
     $username = post("username");
     $password = sha1(post("password"));
     $api_key = sha1(date("Y-m-d H:i:s") . rand(100000, 999999));
+    $role = post("role");
+    $date = date('Y-m-d H:i:s');
+    $query = "INSERT INTO account VALUES(NULL,'$username','$password','$api_key','$role','60','0','$date')";
     $cek = mysqli_query($koneksi, "SELECT * FROM account WHERE username = '$username'");
     if ($cek->num_rows > 0) {
         toastr_set("error", "Username Sudah dipakai");
     } else {
-        $q = mysqli_query($koneksi, "INSERT INTO account VALUES('','$username','$password','$api_key','1','60')");
-        toastr_set("success", "Registrasi berhasil");
+        $q = mysqli_query($koneksi, $query);
+        toastr_set("success", "Registrasi berhasil. Hubungi admin untuk aktivasi");
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +36,7 @@ if (post("username")) {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Wa Blast - Login</title>
+    <title>BMKG TUBAN - Register</title>
 
     <!-- Custom fonts for this template-->
     <link href="<?= $base_url; ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -69,6 +71,14 @@ if (post("username")) {
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password">
+                                        </div>
+                                        <div class="form-group">
+                                          <label>Pilih Role</label>
+                                            <select class="form-control" name="role">
+                                              <option value="1">Admin</option>
+                                              <option value="2">CS</option>
+                                            </select>
+                                            <!-- <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password"> -->
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Register

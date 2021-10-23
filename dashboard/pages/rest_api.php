@@ -182,7 +182,7 @@ curl_setopt_array(<span style="color: #906030">$curl</span>, <span style="color:
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; <a href="https://web.facebook.com/menz.pedia.96/">mnzcreate</a></span>
+            <span>Copyright &copy; <a href="https://wa.me/6282140647578">Febri Kukuh</a></span>
         </div>
     </div>
 </footer>
