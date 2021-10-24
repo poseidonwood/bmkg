@@ -75,7 +75,7 @@ require('../templates/header.php');
 
   <!-- DataTales Example -->
   <?php
-if($_SESSION['username'] == "admin"){
+if($_SESSION['level'] == "admin"){
 
    ?>
   <div class="row">
