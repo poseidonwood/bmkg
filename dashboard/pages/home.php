@@ -56,48 +56,6 @@ require_once('../templates/header.php');
 
     <!-- Content Row -->
     <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#tambahNomorModal">Tambah Nomor</button>
-                    <div class="table table-responsive">
-                        <table class="table table-bordered" width="100%" cellspacing="0">
-                            <thead>
-                                <tr>
-                                    <th>Nomor</th>
-                                    <th>Webhook Url</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                $username = $_SESSION['username'];
-                                $q = mysqli_query($koneksi, "SELECT * FROM device WHERE pemilik = '$username'");
-                                while ($row = mysqli_fetch_assoc($q)) { ?>
-                                    <tr>
-                                        <td><?= $row['nomor']; ?></td>
-
-                                        <td><?= $row['link_webhook']; ?></td>
-                                        </td>
-                                        <td>
-                                            <button class="btn btn-primary scanbutton" onclick="scanqr('<?= $row['nomor']; ?>')">Scan</button>
-                                            <a class="btn btn-danger" href="home.php?act=hapus&nomor=<?= $row['nomor']; ?>">Delete</a>
-                                            <button class="btn btn-success" onclick="sethook('<?= $row['id']; ?>')">Set Webhook</button>
-
-                                        </td>
-                                    </tr>
-                                <?php } ?>
-
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div><br>
-    <div class="row">
         <!-- Earnings (Monthly) Card Example -->
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-primary shadow h-100 py-2">

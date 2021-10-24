@@ -1,0 +1,10 @@
+#!/bin/bash
+# sshpass -p Myul!webhost123 ssh root@103.30.145.188
+# ssh-copy-id root@103.30.145.188
+ssh root@103.30.145.188
+cd /home/admin/public_html/bmkg
+git pull
+# Myul!webhost123
+# git add .
+# git commit -m 'running by bash'
+# git push

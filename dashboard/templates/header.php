@@ -52,7 +52,7 @@
           <span>Dashboard</span></a>
         </li>
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="auto_reply.php">
             <i class="fas fa-fw fa-reply-all"></i>
             <span>Auto-reply</span> </a>
@@ -85,7 +85,7 @@
                     <a class="nav-link" href="rest_api.php">
                       <i class="fas fa-fw fa-code"></i>
                       <span>Rest API</span></a>
-                    </li>
+                    </li> -->
 
                     <li class="nav-item">
                       <a class="nav-link" href="pengaturan.php">
