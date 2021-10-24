@@ -74,6 +74,10 @@ require('../templates/header.php');
 <div class="container-fluid">
 
   <!-- DataTales Example -->
+  <?php
+if($_SESSION['username'] == "admin"){
+
+   ?>
   <div class="row">
     <div class="col-12">
       <div class="card shadow mb-4">
@@ -101,6 +105,7 @@ require('../templates/header.php');
 
       </div>
     </div>
+  <?php } ?>
     <br>
     <div class="row">
       <!--
