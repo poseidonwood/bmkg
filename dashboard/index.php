@@ -1,3 +1,4 @@
 <?php
 require_once('helper/koneksi.php');
-header('Location:'.$base_url.'auth/login.php');
+require_once('helper/function.php');
+header('Location:'.$dashboard_url.'auth/login.php');

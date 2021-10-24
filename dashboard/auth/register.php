@@ -37,13 +37,14 @@ if (post("username")) {
     <meta name="author" content="">
 
     <title>BMKG TUBAN - Register</title>
+    <link rel="shortcut icon" href="<?=$main_url;?>/asset/images/favicon.ico" type="image/x-icon">
 
     <!-- Custom fonts for this template-->
-    <link href="<?= $base_url; ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="<?= $dashboard_url; ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="<?= $base_url; ?>css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="<?= $dashboard_url; ?>css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" />
 </head>
 
@@ -101,11 +102,11 @@ if (post("username")) {
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="<?= $base_url; ?>vendor/jquery/jquery.min.js"></script>
-    <script src="<?= $base_url; ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $dashboard_url; ?>vendor/jquery/jquery.min.js"></script>
+    <script src="<?= $dashboard_url; ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="<?= $base_url; ?>vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="<?= $dashboard_url; ?>vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>

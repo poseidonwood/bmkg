@@ -1,6 +1,58 @@
 <?php
 include_once("koneksi.php");
 session_start();
+$main_url = getSingleValDB("setting_web","id","1","main_url");
+$dashboard_url = getSingleValDB("setting_web","id","1","dashboard_url");
+$name_web = getSingleValDB("setting_web","id","1","name");
+$filename = $main_url.'asset/logs/counter.txt';	//mendefinisikan nama file untuk menyimpan counter
+
+function tanggal_indo($tanggal, $cetak_hari = false)
+{
+  $hari = array(
+    1 =>    'Senin',
+    'Selasa',
+    'Rabu',
+    'Kamis',
+    'Jumat',
+    'Sabtu',
+    'Minggu'
+  );
+
+  $bulan = array(
+    1 =>   'Januari',
+    'Februari',
+    'Maret',
+    'April',
+    'Mei',
+    'Juni',
+    'Juli',
+    'Agustus',
+    'September',
+    'Oktober',
+    'November',
+    'Desember'
+  );
+  $split     = explode('-', $tanggal);
+  $tgl_indo = $split[2] . ' ' . $bulan[(int)$split[1]] . ' ' . $split[0];
+
+  if ($cetak_hari) {
+    $num = date('N', strtotime($tanggal));
+    return $hari[$num] . ', ' . $tgl_indo;
+  }
+  return $tgl_indo;
+}
+
+function counter(){		//function counter
+  global $filename;	//set global variabel $filename
+
+  if(file_exists($filename)){		//jika file counter.txt ada
+    $value = file_get_contents($filename);	//set value = nilai di notepad
+  }else{		//jika file counter.txt tidak ada maka akan membuat file counter.txt
+    $value = 0;		//kemudian set value = 0
+  }
+
+  file_put_contents($filename, ++$value);		//menuliskan kedalam file counter.txt value+1
+}
 
 function get($param)
 {
@@ -131,8 +183,8 @@ function getLastID($table)
 
 function url_wa()
 {
-  global $base_url;
-  return $base_url; // untuk di hosting
+  global $dashboard_url;
+  return $dashboard_url; // untuk di hosting
   //return 'http://localhost:3000/'; // untuk di local
 }
 
@@ -275,8 +327,8 @@ function phoneToStandard($nomor)
 
 function sendApiUrl()
 {
-  global $base_url;
-  return $base_url . "api/send.php?key=" . getSingleValDB("pengaturan", "id", "1", "api_key");
+  global $dashboard_url;
+  return $dashboard_url . "api/send.php?key=" . getSingleValDB("pengaturan", "id", "1", "api_key");
 }
 
 function syncMSG()

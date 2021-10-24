@@ -25,7 +25,7 @@
             <li><i class="fa fa-angle-right"></i><a href="http://maritimjatim.info/" target="_blank">Stasiun Meteorologi Maritim Perak Surabaya</a></li>
             <li><i class="fa fa-angle-right"></i><a href="http://meteobanyuwangi.info/" target="_blank">Stasiun Meteorologi Banyuwangi</a></li>
             <li><i class="fa fa-angle-right"></i><a href="http://stametbawean.com/" target="_blank">Stasiun Meteorologi Sangkapura Bawean</a></li>
-            <li><i class="fa fa-angle-right"></i><a href="<?= $base_url."dashboard";?>" target="_blank">Dashboard</a></li>
+            <li><i class="fa fa-angle-right"></i><a href="<?= $dashboard_url;?>" target="_blank">Dashboard</a></li>
 
           </div>
 

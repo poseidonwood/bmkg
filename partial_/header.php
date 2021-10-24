@@ -1,7 +1,7 @@
 <?php
-include "./config/koneksi.php";
-include "./config/getdata.php";
-include "./config/function.php";
+include "./dashboard/helper/koneksi.php";
+include "./dashboard/helper/getdata.php";
+include "./dashboard/helper/function.php";
 
 ?>
 <!DOCTYPE html>
@@ -38,7 +38,7 @@ include "./config/function.php";
   <meta name="apple-itunes-app" content="app-id=1114372539">
   <meta name="google-play-app" content="app-id=com.Info_BMKG">
 
-  <link rel="shortcut icon" href="./asset/images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="<?=$main_url;?>/asset/images/favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:300,300i,400,400i,700,700i">
   <link rel="stylesheet" href="https://www.bmkg.go.id/asset/plugins/bootstrap/css/bootstrap.min.css">

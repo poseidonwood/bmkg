@@ -9,7 +9,7 @@ if(post("table") == null|| post("url") == null){
   if($datatable['status'] == true){
     $no = 1;
     foreach ($datatable['message'] as $datalist) {
-      $urlstatus = $base_url."ajax/updatestatus.php";
+      $urlstatus = $dashboard_url."ajax/updatestatus.php";
       $nonya = $no++;
       $id = $datalist['id'];
       $username = $datalist['username'];
