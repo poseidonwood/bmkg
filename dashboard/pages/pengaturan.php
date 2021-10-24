@@ -28,10 +28,23 @@ if (post("username")) {
     }
   }
 }
-
+if(post("usernamenew")){
+  $username = post("usernamenew");
+  $password = sha1(post("passwordnew"));
+  $api_key = sha1(date("Y-m-d H:i:s") . rand(100000, 999999));
+  $role = post("levelnew");
+  $date = date('Y-m-d H:i:s');
+  $query = "INSERT INTO account VALUES(NULL,'$username','$password','$api_key','$role','60','0','$date')";
+  $cek = mysqli_query($koneksi, "SELECT * FROM account WHERE username = '$username'");
+  if ($cek->num_rows > 0) {
+      toastr_set("error", "Username Sudah dipakai");
+  } else {
+      $q = mysqli_query($koneksi, $query);
+      toastr_set("success", "Registrasi berhasil. Hubungi admin untuk aktivasi");
+  }
+}
 if (get("act") == "hapus") {
   $id = get("id");
-
   $q = mysqli_query($koneksi, "DELETE FROM account WHERE id='$id'");
   toastr_set("success", "Sukses hapus user");
 }
@@ -62,76 +75,104 @@ require('../templates/header.php');
 
   <!-- DataTales Example -->
   <div class="row">
-
-    <div class="col-md-6">
+    <div class="col-12">
       <div class="card shadow mb-4">
-
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Pengaturan wa</h6>
-        </div>
-
+        <div class="card-header">Daftar Account</div>
         <div class="card-body">
-          <?php
-          $username = $_SESSION['username'];
+          <button class="btn btn-primary mb-4" data-toggle="modal" data-target="#tambahuser">Tambah User</button>
+          <div class="table table-responsive">
+            <table class="table table-bordered" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Username</th>
+                  <th>Level</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="tablenya">
 
-          ?>
-          <hr>
-          <form action="" method="post">
-            <label> API KEY </label>
-            <input type="text" class="form-control" name="apikey" readonly value="<?= getSingleValDB("account", "username", "$username", "api_key") ?>">
-            <br>
-            <button class="btn btn-primary"> Ubah Api Key </button>
-            <br>
-            <br>
-          </form>
-          <form action="" method="post">
-            <label> Batas Pengiriman per menit </label>
-            <input type="text" class="form-control" name="chunk" value="<?= getSingleValDB("account", "username", "$username", "chunk") ?>">
-            <br>
-            <!-- <label> API Key </label>
-            <input type="text" class="form-control" name="api_key" readonly value="<?= getSingleValDB("pengaturan", "id", "1", "api_key") ?>">
-            <br> -->
-            <button class="btn btn-success"> Simpan </button>
-            <!-- <a class="btn btn-primary" href="pengaturan.php?act=gapi"> Generate New API Key </a> -->
-          </form>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
-    <div class="col-md-6">
+    <br>
+    <div class="row">
+      <!--
+      <div class="col-md-6">
       <div class="card shadow mb-4">
 
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Pengaturan account</h6>
-        </div>
+      <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Pengaturan wa</h6>
+    </div>
 
-        <div class="card-body">
-          <?php
-          $username = $_SESSION['username'];
+    <div class="card-body">
+    <?php
+    $username = $_SESSION['username'];
 
-          ?>
-          <hr>
-          <form action="" method="post">
-            <label> Username </label>
-            <input type="text" class="form-control" name="username" readonly value="<?= getSingleValDB("account", "username", "$username", "username") ?>">
-            <br>
-            <label> Password baru </label>
-            <input type="password" class="form-control" name="newpassword">
-            <br>
-            <label>Ulangi Password baru </label>
-            <input type="password" class="form-control" name="newpassword2">
-            <br>
-            <!-- <label> API Key </label>
-            <input type="text" class="form-control" name="api_key" readonly value="<?= getSingleValDB("pengaturan", "id", "1", "api_key") ?>">
-            <br> -->
-            <button class="btn btn-success"> Ubah password </button>
-            <!-- <a class="btn btn-primary" href="pengaturan.php?act=gapi"> Generate New API Key </a> -->
-          </form>
-        </div>
-      </div>
+    ?>
+    <hr>
+    <form action="" method="post">
+    <label> API KEY </label>
+    <input type="text" class="form-control" name="apikey" readonly value="<?= getSingleValDB("account", "username", "$username", "api_key") ?>">
+    <br>
+    <button class="btn btn-primary"> Ubah Api Key </button>
+    <br>
+    <br>
+  </form>
+  <form action="" method="post">
+  <label> Batas Pengiriman per menit </label>
+  <input type="text" class="form-control" name="chunk" value="<?= getSingleValDB("account", "username", "$username", "chunk") ?>">
+  <br>
+  <!-- <label> API Key </label>
+  <input type="text" class="form-control" name="api_key" readonly value="<?= getSingleValDB("pengaturan", "id", "1", "api_key") ?>">
+  <br> -->
+  <!--  <button class="btn btn-success"> Simpan </button>
+  <!-- <a class="btn btn-primary" href="pengaturan.php?act=gapi"> Generate New API Key </a> -->
+  <!-- </form>
+</div>
+</div>
 
+</div> -->
+<div class="col-md-12">
+  <div class="card shadow mb-4">
+
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Pengaturan account</h6>
+    </div>
+
+    <div class="card-body">
+      <?php
+      $username = $_SESSION['username'];
+
+      ?>
+      <hr>
+      <form action="" method="post">
+        <label> Username </label>
+        <input type="text" class="form-control" name="username" readonly value="<?= getSingleValDB("account", "username", "$username", "username") ?>">
+        <br>
+        <label> Password baru </label>
+        <input type="password" class="form-control" name="newpassword">
+        <br>
+        <label>Ulangi Password baru </label>
+        <input type="password" class="form-control" name="newpassword2">
+        <br>
+        <!-- <label> API Key </label>
+        <input type="text" class="form-control" name="api_key" readonly value="<?= getSingleValDB("pengaturan", "id", "1", "api_key") ?>">
+        <br> -->
+        <button class="btn btn-success"> Ubah password </button>
+        <!-- <a class="btn btn-primary" href="pengaturan.php?act=gapi"> Generate New API Key </a> -->
+      </form>
     </div>
   </div>
+
+</div>
+</div>
 
 
 </div>
@@ -180,7 +221,7 @@ require('../templates/header.php');
   </div>
 </div>
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="tambahuser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -192,13 +233,13 @@ require('../templates/header.php');
       <div class="modal-body">
         <form action="" method="POST">
           <label> Username </label>
-          <input type="text" name="username" required class="form-control">
+          <input type="text" name="usernamenew" required class="form-control">
           <br>
           <label> Password </label>
-          <input type="password" name="password" required class="form-control">
+          <input type="password" name="passwordnew" required class="form-control">
           <br>
           <label for="exampleFormControlSelect1">Level</label>
-          <select class="form-control" id="exampleFormControlSelect1" name="level">
+          <select class="form-control" id="exampleFormControlSelect1" name="levelnew">
             <option value="1">Admin</option>
             <option value="2">CS</option>
           </select>
@@ -228,7 +269,7 @@ require('../templates/header.php');
 
 <!-- Page level custom scripts -->
 <script src="<?= $base_url; ?>js/demo/datatables-demo.js"></script>
-
+<script src="<?= $base_url; ?>js/custom.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous"></script>
 <script>
 
@@ -240,45 +281,7 @@ require('../templates/header.php');
 toastr_show();
 
 ?>
-
-var socket = io();
-//   jika instal di local , gunakan socket ini :
-// var socket = io('http://localhost:3000', {
-//     transports: ['websocket', 'polling', 'flashsocket']
-// });
-
-socket.emit('ready', 'sdf');
-socket.on('loader', function() {
-  $('#cardimg').html(`<img src="loading.gif" class="card-img-top center" alt="cardimg" id="qrcode"  style="height:250px; width:250px;">`);
-})
-socket.on('message', function(msg) {
-  console.log(msg)
-  $('.log').html(`<li>` + msg.text + `</li>`);
-})
-socket.on('qr', function(src) {
-  $('#cardimg').html(` <img src="` + src.url + `" class="card-img-top" alt="cardimg" id="qrcode" style="height:250px; width:250px;">`);
-});
-
-socket.on('authenticated', function(src) {
-  $('#cardimg').html(`<h2 class="text-center text-success mt-4">Whatsapp Connected.<br>` + src + `<h2>`);
-});
-
-$('#logout').click(function() {
-  $('#cardimg').html(`<h2 class="text-center text-dark mt-4">Please wait..<h2>`);
-  $('.log').html(`<li>Connecting..</li>`);
-  socket.emit('logout', 'delete');
-})
-
-$('#scanqrr').click(function() {
-  socket.emit('scanqr', 'scanqr');
-})
-$('#cekstatus').click(function() {
-  socket.emit('cekstatus', 'cekstatus');
-})
-
-socket.on('isdelete', function(msg) {
-  $('#cardimg').html(msg);
-})
+setInterval( function () {gettable('account','<?=$base_url."ajax/gettable.php";?>')}, 1000);
 </script>
 </body>
 

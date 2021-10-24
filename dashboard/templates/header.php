@@ -11,13 +11,7 @@
 
   <title>BMKG TUBAN</title>
 
-  <link rel="shortcut icon" href="https://bmkg.go.id/asset/img/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="https://bmkg.go.id/asset/img/favicon-60@3x.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="https://bmkg.go.id/asset/img/favicon-60.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="https://bmkg.go.id/asset/img/favicon-60@2x.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="https://bmkg.go.id/asset/img/favicon-60@3x.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="https://bmkg.go.id/asset/img/favicon-76.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="https://bmkg.go.id/asset/img/favicon-76@2x.png" />
+  <link rel="shortcut icon" href="../../asset/images/favicon.ico" type="image/x-icon">
   <!-- Custom fonts for this template-->
   <link href="<?= $base_url; ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -60,8 +54,8 @@
 
         <li class="nav-item">
           <a class="nav-link" href="auto_reply.php">
-            <i class="fas fa-reply-all"></i>
-            Auto-reply </a>
+            <i class="fas fa-fw fa-reply-all"></i>
+            <span>Auto-reply</span> </a>
           </li>
 
           <li class="nav-item">
@@ -129,8 +123,8 @@
 
                             <!-- Nav Item - Messages -->
 
-                            <div class="topbar-divider d-none d-sm-block"></div>
 
+                            <div class="topbar-divider d-none d-sm-block"></div>
                             <!-- Nav Item - User Information -->
                             <li class="nav-item dropdown no-arrow">
                               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -139,6 +133,10 @@
                               </a>
                               <!-- Dropdown - User Information -->
                               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="<?=$base_url;?>" target="_blank">
+                                  <i class="fas fa-globe fa-sm fa-fw mr-2 text-gray-400"></i>
+                                  Go to Web
+                                </a>
                                 <a class="dropdown-item" href="<?= $base_url; ?>auth/logout.php" data-toggle="modal" data-target="#logoutModal">
                                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                   Logout

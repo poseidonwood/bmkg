@@ -13,10 +13,16 @@ if (post("username")) {
   $password = post("password");
 
   $login = login($username, $password);
-  if ($login == true) {
-    redirect("../pages/home.php");
-  }else {
-    toastr_set("error", "Username / password salah / akun anda belum aktif");
+  if(is_array($login)){
+    if($login['status'] == false){
+      toastr_set("error", $login['message']);
+    }
+  }else{
+    if ($login == true) {
+      redirect("../pages/home.php");
+    }else {
+      toastr_set("error", "Username / password salah");
+    }
   }
 }
 

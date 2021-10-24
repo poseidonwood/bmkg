@@ -29,7 +29,11 @@ function login($u, $p)
   if (mysqli_num_rows($q)) {
     $status = getSingleValDB("account","username",$u,"status");
     if($status == "0"){
-      return false;
+      $data = array(
+        'status' => false,
+        'message' => "Akun anda tidak aktif, Hub admin"
+      );
+      return $data;
     }else{
       $_SESSION['login'] = true;
       $_SESSION['username'] = $u;
@@ -81,19 +85,31 @@ function countPresentase()
     return 0;
   }
 }
+//Query Function
+function getDataByTable($table = null)
+{
+  if($table == null){
+    $data = array(
+      'status' => false,
+      'message' => "table is null"
+    );
+  }else{
+    global $koneksi;
+    $datalist = [];
+    $query = "SELECT * FROM `$table` order by `id` DESC";
+    $q = mysqli_query($koneksi, $query);
+    while ($row = mysqli_fetch_assoc($q)) {
+      array_push($datalist, $row);
+    }
+    $data = array(
+      'status' => true,
+      'message' => $datalist
+    );
+  }
 
-// function getAllNumber()
-// {
-//     global $koneksi;
-//     $q = mysqli_query($koneksi, "SELECT * FROM `nomor`");
-//     $arr = [];
-
-//     while ($row = mysqli_fetch_assoc($q)) {
-//         array_push($arr, $row['nomor']);
-//         array_push($arr, $row['nama']);
-//     }
-//     return $arr;
-// }
+  return $data;
+}
+//
 function getAllNumberandmessage()
 {
   global $koneksi;
