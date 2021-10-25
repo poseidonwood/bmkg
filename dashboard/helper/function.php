@@ -4,7 +4,7 @@ session_start();
 $main_url = getSingleValDB("setting_web","id","1","main_url");
 $dashboard_url = getSingleValDB("setting_web","id","1","dashboard_url");
 $name_web = getSingleValDB("setting_web","id","1","name");
-$filename = $main_url.'asset/logs/counter.txt';	//mendefinisikan nama file untuk menyimpan counter
+$filename = '../asset/logs/counter.txt';	//mendefinisikan nama file untuk menyimpan counter
 
 function tanggal_indo($tanggal, $cetak_hari = false)
 {
