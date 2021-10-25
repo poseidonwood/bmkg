@@ -600,6 +600,12 @@ function getgempaterkini()
 
   return $datagempaterkini;
 }
+function listgempadirasakan()
+{
+
+  $datagempadirasakan = curldata("http://gempa-api.herokuapp.com/gempa/dirasakan");
+  return $datagempadirasakan;
+}
 //End Get Data Gempa
 //Get Peringatan Dini gelombang
 function gelombangdini()
