@@ -1,0 +1,320 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Waktu pembuatan: 25 Okt 2021 pada 05.05
+-- Versi server: 10.4.13-MariaDB
+-- Versi PHP: 7.2.31
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+--
+-- Database: `bmkg_tuban`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `account`
+--
+
+CREATE TABLE `account` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `api_key` varchar(100) NOT NULL,
+  `level` enum('1','2') NOT NULL DEFAULT '2' COMMENT '1 = ADMIN\r\n2 = CS',
+  `chunk` int(33) NOT NULL,
+  `status` enum('0','1') NOT NULL DEFAULT '0',
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `account`
+--
+
+INSERT INTO `account` (`id`, `username`, `password`, `api_key`, `level`, `chunk`, `status`, `created_at`) VALUES
+(7, 'admin', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'c8dfe29e3a0946519cceb81b5f7e001f8f8f72ba', '1', 67, '1', '0000-00-00 00:00:00'),
+(96, 'febri', 'b9f08a0a16e7ed30ab463acaf6f15c46f9c5ff21', '5986a12f4fa0722eb09a02ea9802a477f6437810', '1', 60, '0', '2021-10-24 11:47:04'),
+(97, 'kadari', 'b9f08a0a16e7ed30ab463acaf6f15c46f9c5ff21', 'f5306cffca111f0346217155e2dbe4a6d595dc12', '2', 60, '0', '2021-10-24 11:47:20');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `all_contacts`
+--
+
+CREATE TABLE `all_contacts` (
+  `id` int(11) NOT NULL,
+  `sender` varchar(111) NOT NULL,
+  `number` varchar(111) NOT NULL,
+  `name` varchar(111) NOT NULL,
+  `type` enum('Personal','Group') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `autoreply`
+--
+
+CREATE TABLE `autoreply` (
+  `id` int(11) NOT NULL,
+  `keyword` varchar(255) NOT NULL,
+  `response` varchar(255) NOT NULL,
+  `media` text NOT NULL,
+  `nomor` varchar(15) NOT NULL DEFAULT '0',
+  `make_by` varchar(33) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `contacts`
+--
+
+CREATE TABLE `contacts` (
+  `id` int(11) NOT NULL,
+  `sender` varchar(111) NOT NULL,
+  `number` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `type` enum('Personal','Group','','') NOT NULL,
+  `make_by` varchar(33) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `device`
+--
+
+CREATE TABLE `device` (
+  `id` int(11) NOT NULL,
+  `pemilik` varchar(111) NOT NULL,
+  `nomor` varchar(14) NOT NULL,
+  `link_webhook` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `nomor`
+--
+
+CREATE TABLE `nomor` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `nomor` varchar(255) NOT NULL,
+  `pesan` text NOT NULL,
+  `make_by` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pesan`
+--
+
+CREATE TABLE `pesan` (
+  `id` int(11) NOT NULL,
+  `sender` varchar(15) NOT NULL,
+  `nomor` varchar(255) NOT NULL,
+  `pesan` text NOT NULL,
+  `media` varchar(255) DEFAULT NULL,
+  `status` enum('MENUNGGU JADWAL','GAGAL','TERKIRIM') NOT NULL DEFAULT 'MENUNGGU JADWAL',
+  `jadwal` datetime NOT NULL,
+  `make_by` varchar(255) DEFAULT NULL,
+  `time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `post`
+--
+
+CREATE TABLE `post` (
+  `id` int(11) NOT NULL,
+  `judul` varchar(255) NOT NULL,
+  `category` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `tags` varchar(255) NOT NULL,
+  `creator` varchar(255) NOT NULL,
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `post`
+--
+
+INSERT INTO `post` (`id`, `judul`, `category`, `content`, `tags`, `creator`, `created_at`) VALUES
+(1, 'BMKG: Waspada La Nina dan Peningkatan Risiko Bencana Hidrometerologi\r\n', 'Press Realease', '<img class=\"img-responsive\" src=\"https://cdn.bmkg.go.id/Web/bandicam-2021-10-18-15-50-23-238.jpg\" alt=\"\">\r\n                    <div class=\"margin-bottom-40\"></div>\r\n					<p><strong>Jakarta (18 Oktober 2021)</strong> - Kepala Badan Meteorologi, Klimatologi, dan Geofisika (BMKG) Dwikorita Karnawati menyampaikan Peringatan Dini untuk WASPADA datangnya La-Nina menjelang akhir tahun ini.</p><p>Berdasarkan monitoring terhadap perkembangan terbaru dari data suhu permukaan laut di Samudra Pasifik bagian tengah dan timur, menunjukkan bahwa saat ini nilai anomali telah melewati ambang batas La Nina, yaitu sebesar -0.61 pada Dasarian I Oktober 2021. Kondisi ini berpotensi untuk terus berkembang dan kita harus segera bersiap menyambut kehadiran La Nina 2021/2022 yang diprakirakan akan berlangsung dengan intensitas lemah - sedang, setidaknya hingga Februari 2022.</p><p>Didasarkan pada kejadian La Nina tahun 2020 lalu, hasil kajian BMKG menunjukkan bahwa curah hujan mengalami peningkatan pada November-Desember-Januari terutama di wilayah Sumatra bagian selatan, Jawa, Bali hingga NTT, Kalimantan bagian selatan dan Sulawesi bagian selatan, maka La Nina tahun ini diprediksikan relatif sama dan akan berdampak pada peningkatan curah hujan bulanan berkisar antara 20 - 70% di atas normalnya. Dengan adanya potensi peningkatan curah hujan pada periode musim hujan tersebut maka perlu kewaspadaan dan kesiapsiagaan terhadap potensi lanjutan dari curah hujan tinggi yang berpotensi memicu bencana hidrometeorologi.</p><p>Dwikorita juga mengingatkan agar pemerintah daerah, masyarakat, dan semua pihak terkait dengan pengelolaan sumber daya air dan pengurangan risiko bencana yang berada di wilayah yang berpotensi terdampak La-Nina, agar bersiap segera untuk melakukan langkah pencegahan dan mitigasi terhadap peningkatan potensi bencana Hidrometeorologi seperti banjir, longsor, banjir bandang, angin kencang atau puting beliung ataupun terjadinya badai tropis.</p><p>Sementara itu Plt. Deputi Bidang Klimatologi Urip Haryoko menambahkan, berdasarkan hasil pengamatan data dari jejaring stasiun pengamatan hujan BMKG di seluruh wilayah Indonesia hingga Dasarian I (sepuluh hari pertama) Oktober 2021, menunjukkan hasil monitoring perkembangan musim hujan tahun 2021/2022 bahwa 19,3% wilayah zona musim di Indonesia telah memasuki musim hujan. Beberapa zona musim Indonesia yang telah mengalami musim hujan tersebut meliputi wilayah Aceh bagian tengah, Sumatra Utara, sebagian besar Riau, Sumatra Barat, Jambi, sebagian besar Sumtera Selatan, Lampung bagian barat, Banten bagian timur, Jawa Barat bagian selatan, Jawa Tengah bagian barat, sebagian kecil Jawa Timur bagian selatan, sebagian Bali, Kalimantan Utara, sebagian besar Kalimantan Timur, Kalimantan Selatan bagian selatan dan timur, Kalimantan tengah bagian timur, Pulau Taliabu, dan Pulau Seram bagian selatan.</p><p>Hal ini menunjukkan kesesuaian dengan prediksi prakiraan awal musim hujan 2021/2022 BMKG sebagaimana disampaikan sebelumnya oleh Kepala Badan Meteorologi, Klimatologi dan Geofisika (BMKG), Dwikorita Karnawati dalam konferensi pers daring di bulan Agustus (26/8/2021) yang lalu bahwa awal musim hujan di wilayah Indonesia, akan maju lebih dini mulai Oktober.</p><p>BMKG juga telah memprakirakan bahwa sebagian wilayah Indonesia yang akan memasuki periode Musim Hujan mulai Oktober ini, meliputi wilayah Aceh bagian timur, Riau bagian tenggara, Jambi bagian barat, Sumatra Selatan bagian tenggara, Bangka Belitung, Banten bagian barat, Jawa Barat bagian tengah, Jawa Tengah bagian barat dan tengah, sebagian DI Yogyakarta dan sebagian kecil Jawa Timur, Kalimantan Tengah bagian timur, Kalimantan Selatan dan Kalimantan Timur dan Kalimantan Utara. Sedangkan beberapa wilayah Indonesia lainnya, akan memasuki musim hujan pada bulan November hingga Desember 2021 secara bertahap dalam waktu yang tidak bersamaan. Secara umum, sampai dengan bulan November 2021 nanti diprakirakan 87.7% wilayah Indonesia telah memasuki musim hujan. Kemudian pada akhir bulan Desember 2021, BMKG memprakirakan 96.8% wilayah Indonesia telah memasuki musim hujan.</p><p>Perlu dicermati juga bulan Oktober ini bagi beberapa wilayah di pulau Jawa, Bali, Nusa Tenggara dan Sulawesi Selatan merupakan wilayah yang sedang mengalami periode transisi atau peralihan musim dari musim kemarau ke musim hujan. Pada periode peralihan musim ini, perlu diwaspadai fenomena cuaca ekstrim yang sering muncul, seperti hujan lebat, angin puting beliung, angin kencang meskipun periodenya singkat tapi sering memicu terjadinya bencana hidrometeorologi. Kewaspadaan dalam menghadapi musim hujan ini selain wilayah-wilayah yang langganan atau berpotensi banjir dan longsor, lebih waspada lagi pada periode puncak musim hujan yang diprediksi akan dominan terjadi bulan Januari dan Februari 2022.</p><p>Bagi masyarakat yang hendak memperoleh informasi dan diharapkan terus memantau perkembangan iklim dan cuaca terkini, BMKG membuka layanan informasi cuaca dan iklim 24 jam, yaitu melalui:</p><p>� https://www.bmkg.go.id;<br>� https://iklim.bmkg.go.id;<br>� follow media sosial @infoBMKG;<br>� call center BMKG (196)<br>� aplikasi iOS dan android \"Info BMKG\";<br>� atau dapat langsung menghubungi kantor BMKG terdekat.</p><p>Jakarta, 18 Oktober 2021</p><p><strong>Biro Hukum dan Organisasi<br>Bagian Hubungan Masyarakat</strong></p>\r\n					<div class=\"margin-bottom-30\"></div>', '#SIARAN PERS;febr#APPS INFO BMKG', 'febri', '2021-10-23 07:56:57');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `receive_chat`
+--
+
+CREATE TABLE `receive_chat` (
+  `id` int(11) NOT NULL,
+  `id_pesan` varchar(200) NOT NULL,
+  `nomor` varchar(255) NOT NULL,
+  `pesan` text NOT NULL,
+  `from_me` enum('0','1') NOT NULL DEFAULT '0',
+  `nomor_saya` varchar(255) DEFAULT NULL,
+  `tanggal` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `setting_web`
+--
+
+CREATE TABLE `setting_web` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `main_url` varchar(255) NOT NULL,
+  `dashboard_url` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `setting_web`
+--
+
+INSERT INTO `setting_web` (`id`, `name`, `main_url`, `dashboard_url`) VALUES
+(1, 'BMKG TUBAN', 'http://localhost/bmkg/', 'http://localhost/bmkg/dashboard/');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indeks untuk tabel `account`
+--
+ALTER TABLE `account`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `all_contacts`
+--
+ALTER TABLE `all_contacts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `autoreply`
+--
+ALTER TABLE `autoreply`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `contacts`
+--
+ALTER TABLE `contacts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `device`
+--
+ALTER TABLE `device`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `nomor`
+--
+ALTER TABLE `nomor`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `pesan`
+--
+ALTER TABLE `pesan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `post`
+--
+ALTER TABLE `post`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `receive_chat`
+--
+ALTER TABLE `receive_chat`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `setting_web`
+--
+ALTER TABLE `setting_web`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT untuk tabel yang dibuang
+--
+
+--
+-- AUTO_INCREMENT untuk tabel `account`
+--
+ALTER TABLE `account`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
+
+--
+-- AUTO_INCREMENT untuk tabel `all_contacts`
+--
+ALTER TABLE `all_contacts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `autoreply`
+--
+ALTER TABLE `autoreply`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `contacts`
+--
+ALTER TABLE `contacts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=645;
+
+--
+-- AUTO_INCREMENT untuk tabel `device`
+--
+ALTER TABLE `device`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `nomor`
+--
+ALTER TABLE `nomor`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `pesan`
+--
+ALTER TABLE `pesan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `post`
+--
+ALTER TABLE `post`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT untuk tabel `receive_chat`
+--
+ALTER TABLE `receive_chat`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `setting_web`
+--
+ALTER TABLE `setting_web`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;
+
