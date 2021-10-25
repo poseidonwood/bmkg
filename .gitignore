@@ -1,3 +1,2 @@
-config/koneksi.php
-dashboard/helper/koneksi.php
-asset/logs/
+#dashboard/helper/koneksi.php
+#asset/logs/counter.txt
