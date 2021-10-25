@@ -1,5 +1,5 @@
 <?php
-
+include_once 'function.php';
 /*Get Data Cuaca */
 function getcuaca($kota = null)
 {
@@ -9,9 +9,13 @@ function getcuaca($kota = null)
     'tuban' => '501308'
   );
   $urlget = "https://ibnux.github.io/BMKG-importer/cuaca/";
-  $lamongan = file_get_contents($urlget . $data['lamongan'] . ".json");
-  $tuban = file_get_contents($urlget . $data['tuban'] . ".json");
-  $bojonegoro = file_get_contents($urlget . $data['bojonegoro'] . ".json");
+  // $lamongan = file_get_contents($urlget . $data['lamongan'] . ".json");
+  // $tuban = file_get_contents($urlget . $data['tuban'] . ".json");
+  // $bojonegoro = file_get_contents($urlget . $data['bojonegoro'] . ".json");
+  $lamongan = curldata($urlget . $data['lamongan'] . ".json");
+  $tuban = curldata($urlget . $data['tuban'] . ".json");
+  $bojonegoro = curldata($urlget . $data['bojonegoro'] . ".json");
+
   if (strtolower($kota) == "lamongan") {
     return $lamongan;
   } else if (strtolower($kota) == "tuban") {
@@ -117,13 +121,17 @@ function lamongan()
 /* Response : {"sumberData":"BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)","gempaTerkini":{"detail":"Gempa Bumi yang baru saja terjadi","url":"http://gempa-api.herokuapp.com/gempa/terkini","shakemapBaseUrl":"https://data.bmkg.go.id/DataMKG/TEWS/[:idShakemap]"},"gempaDirasakan":{"detail":"15 gempa bumi terbaru yang dirasakan","url":"http://gempa-api.herokuapp.com/gempa/dirasakan"},"gempaMag5":{"detail":"15 gempa bumi dengan magnitudo > 5.0","url":"http://gempa-api.herokuapp.com/gempa/magnitudo"}} */
 function getgempaterkini()
 {
-  $datagempaterkini = file_get_contents("https://gempa-api.herokuapp.com/gempa/terkini");
+  // $datagempaterkini = file_get_contents("https://gempa-api.herokuapp.com/gempa/terkini");
+  $datagempaterkini = curldata("https://gempa-api.herokuapp.com/gempa/terkini");
+
   return $datagempaterkini;
 }
 //End Get Data Gempa
 //Get Peringatan Dini gelombang
 function gelombangdini()
 {
-  $getdata = file_get_contents("https://peta-maritim.bmkg.go.id/public_api/perairan/I.06_Perairan%20Tuban%20-%20Lamongan.json");
+  // $getdata = file_get_contents("https://peta-maritim.bmkg.go.id/public_api/perairan/I.06_Perairan%20Tuban%20-%20Lamongan.json");
+  $getdata = curldata("https://peta-maritim.bmkg.go.id/public_api/perairan/I.06_Perairan%20Tuban%20-%20Lamongan.json");
+
   return json_decode($getdata,true);
 }

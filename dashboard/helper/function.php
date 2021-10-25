@@ -6,6 +6,23 @@ $dashboard_url = getSingleValDB("setting_web","id","1","dashboard_url");
 $name_web = getSingleValDB("setting_web","id","1","name");
 $filename = '../asset/logs/counter.txt';	//mendefinisikan nama file untuk menyimpan counter
 
+function curldata($url)
+{
+  //  Initiate curl
+  $ch = curl_init();
+  // Will return the response, if false it print the response
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  // Set the url
+  curl_setopt($ch, CURLOPT_URL,$url);
+  // Execute
+  $result=curl_exec($ch);
+  // Closing
+  curl_close($ch);
+
+  // Will dump a beauty json :3
+  // var_dump(json_decode($result, true));
+  return $result;
+}
 function tanggal_indo($tanggal, $cetak_hari = false)
 {
   $hari = array(
@@ -46,7 +63,8 @@ function counter(){		//function counter
   global $filename;	//set global variabel $filename
 
   if(file_exists($filename)){		//jika file counter.txt ada
-    $value = file_get_contents($filename);	//set value = nilai di notepad
+    // $value = file_get_contents($filename);
+    $value = curldata($filename);	//set value = nilai di notepad
   }else{		//jika file counter.txt tidak ada maka akan membuat file counter.txt
     $value = 0;		//kemudian set value = 0
   }
