@@ -1,6 +1,5 @@
 <?php
 include "./dashboard/helper/koneksi.php";
-include "./dashboard/helper/getdata.php";
 include "./dashboard/helper/function.php";
 
 ?>

@@ -1,5 +1,5 @@
 <?php
-include_once 'function.php';
+include 'function.php';
 /*Get Data Cuaca */
 function getcuaca($kota = null)
 {
