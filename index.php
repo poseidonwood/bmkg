@@ -197,43 +197,6 @@ include "./partial_/navbar.php";
                 </ul>
               </div>
             </div>
-
-            <div class="blog-thumb margin-bottom-20">
-              <div class="blog-thumb-mkg">
-                <img src="https://cdn.bmkg.go.id/Web/WhatsApp-Image-2021-10-16-at-00.02.51-250x150.jpeg" alt="">
-              </div>
-              <div class="blog-thumb-desc">
-                <h3><a href="/press-release/?p=perkuat-sistem-peringatan-dini-tsunami-bmkg-badan-geologi-kementerian-esdm-intensifkan-pertukaran-data-dan-informasi&tag=press-release&lang=ID">Perkuat Sistem Peringatan Dini Tsunami, BMKG-Badan Geologi Kementerian ESDM Intensifkan Pertukaran Data Dan Informasi</a></h3>
-                <ul class="blog-thumb-info">
-                  <li>16 Okt 2021</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="blog-thumb margin-bottom-20">
-              <div class="blog-thumb-mkg">
-                <img src="https://cdn.bmkg.go.id/Web/bandicam-2021-10-12-08-43-32-894-250x150.jpg" alt="">
-              </div>
-              <div class="blog-thumb-desc">
-                <h3><a href="/press-release/?p=sambut-postitif-kehadiran-inacbt-kepala-bmkg-memperkuat-sistem-peringatan-dini-tsunami&tag=press-release&lang=ID">Sambut Positif Kehadiran InaCBT, Kepala BMKG: Memperkuat Sistem Peringatan Dini Tsunami</a></h3>
-                <ul class="blog-thumb-info">
-                  <li>12 Okt 2021</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="blog-thumb margin-bottom-20">
-              <div class="blog-thumb-mkg">
-                <img src="https://cdn.bmkg.go.id/Web/WhatsApp-Image-2021-10-10-at-09.37.52-250x150.jpeg" alt="">
-              </div>
-              <div class="blog-thumb-desc">
-                <h3><a href="/press-release/?p=udara-jateng-diy-semakin-panas-ini-penyebabnya&tag=press-release&lang=ID">Udara Jateng-DIY Semakin Panas, Ini Penyebabnya</a></h3>
-                <ul class="blog-thumb-info">
-                  <li>10 Okt 2021</li>
-                </ul>
-              </div>
-            </div>
-
           </div>
           <!--<a href="../rakorbangnas">
           <img class="img-responsive md-margin-bottom-30" data-original="https://bmkg.go.id/asset/img/banner/Rakorbangnas-BMKG-2021.jpg" alt="">
