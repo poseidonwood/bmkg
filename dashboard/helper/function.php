@@ -158,7 +158,7 @@ function countPresentase()
   }
 }
 //Query Function
-function getDataByTable($table = null)
+function getDataByTable($table = null,$limit = NULL)
 {
   if($table == null){
     $data = array(
@@ -168,7 +168,11 @@ function getDataByTable($table = null)
   }else{
     global $koneksi;
     $datalist = [];
-    $query = "SELECT * FROM `$table` order by `id` DESC";
+    if($limit == NULL){
+      $query = "SELECT * FROM `$table` order by `id` DESC";
+    }else{
+      $query = "SELECT * FROM `$table` order by `id` DESC limit $limit";
+    }
     $q = mysqli_query($koneksi, $query);
     while ($row = mysqli_fetch_assoc($q)) {
       array_push($datalist, $row);
@@ -178,7 +182,6 @@ function getDataByTable($table = null)
       'message' => $datalist
     );
   }
-
   return $data;
 }
 //
