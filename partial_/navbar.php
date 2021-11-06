@@ -70,59 +70,9 @@
                         <div class="col-md-3 md-margin-bottom-30">
                           <h2>Profil</h2>
                           <ul class="dropdown-link-list">
-                            <li><a href="profil/?p=sejarah">Sejarah</a></li>
                             <li><a href="profil/?p=visi-misi">Visi dan Misi</a></li>
-                            <li><a href="profil/?p=tugas-fungsi">Tugas dan Fungsi</a></li>
-                            <li><a href="profil/?p=struktur-organisasi">Struktur Organisasi</a></li>
-                            <li><a href="profil/pejabat-bmkg-pusat.bmkg">Pejabat BMKG Pusat</a></li>
-                            <li><a href="profil/balai-besar-mkg.bmkg">Balai Besar MKG</a></li>
-                            <li><a href="profil/stasiun-upt.bmkg">Stasiun MKG</a></li>
-                            <li><a href="profil/?p=logo-bmkg">Logo BMKG</a></li>
-                            <li><a href="profil/sumber-daya-manusia.bmkg">Sumber Daya Manusia</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-md-3 md-margin-bottom-30">
-                          <h2>Publikasi</h2>
-                          <ul class="dropdown-link-list">
-                            <li><a href="press-release/">Siaran Pers</a></li>
-                            <li><a href="pidato/">Pidato Pimpinan BMKG</a></li>
-                            <li><a href="artikel/">Artikel</a></li>
-                            <li><a href="profil/?p=majalah">Majalah</a></li>
-                            <li><a href="http://media.bmkg.go.id/" target="_blank">Audio dan Video</a></li>
-                            <li><a href="http://puslitbang.bmkg.go.id/jmg" target="_blank">Jurnal</a></li>
-                            <li><a href="http://pusdiklat.bmkg.go.id/" target="_blank">E-Learning</a></li>
-                            <li><a href="brosur/">Brosur / Leaflet / Booklet</a></li>
-                            <li><a href="profil/proyek-perubahan.bmkg">Proyek Perubahan</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-md-3 md-margin-bottom-30">
-                          <h2>Informasi Publik</h2>
-                          <ul class="dropdown-link-list">
-                            <li><a href="http://ppid.bmkg.go.id/informasi-publik-yang-wajib-disediakan-dan-diumumkan-secara-berkala/" target="_blank">Berkala</a></li>
-                            <li><a href="http://ppid.bmkg.go.id/informasi-publik-yang-wajib-tersedia-setiap-saat/" target="_blank">Setiap Saat</a></li>
-                            <li><a href="http://ppid.bmkg.go.id/informasi-publik-yang-wajib-diumumkan-secara-serta-merta/" target="_blank">Serta Merta</a></li>
-                            <li><a href="profil/?p=transparansi-kinerja">Transparansi Kinerja BMKG</a></li>
-                            <!--<li><a href="profil/?p=dipa">DIPA</a></li>
-															<li><a href="profil/?p=lakip">LAKIP</a></li>
-															<li><a href="profil/?p=rencana-strategis">Rencana Strategis</a></li>
-															<li><a href="profil/?p=rencana-kerja">Rencana Kerja</a></li>
-															<li><a href="profil/?p=laporan-keuangan">Laporan Keuangan</a></li>
-															<li><a href="profil/?p=iku">Indikator Kinerja Utama (IKU)</a></li>-->
-                          </ul>
-                        </div>
-                        <div class="col-md-3 md-margin-bottom-30">
-                          <h2>Layanan Publik</h2>
-                          <ul class="dropdown-link-list">
-                            <li><a href="http://ptsp.bmkg.go.id" target="_blank">Pelayanan Terpadu Satu Pintu (PTSP)</a></li>
-                            <li><a href="http://ppid.bmkg.go.id" target="_blank">Pejabat Pengelola Informasi dan Dokumentasi (PPID)</a></li>
-                            <li><a href="http://lpse.bmkg.go.id" target="_blank">LPSE</a></li>
-                            <li><a href="https://www.lapor.go.id/" target="_blank">Pengaduan Masyarakat</a></li>
-                            <li><a href="https://elhkpn.kpk.go.id/portal/user/pengumuman_lhkpn/VFRoMlZTdHZRelZpZUVKNWNWSXlSa3BwZWtWVGR6WnlUSGtyUWtoWWFFODVkMWsyU0VOTU9FRjFjRUl5YzJaWk1HNDRkRTVDYVdWMlpsUXlUeTl5Wnc9PQ==" target="_blank">LHKPN</a></li>
-                            <li><a href="profil/?p=media-sosial">Media Sosial</a></li>
-                          </ul>
-                          <h2>Regulasi</h2>
-                          <ul class="dropdown-link-list">
-                            <li><a href="http://jdih.bmkg.go.id" target="_blank">Jaringan Dokumentasi Informasi Hukum BMKG</a></li>
+                            <li><a href="profil/?p=logo-bmkg">SDM</a></li>
+                            <li><a href="profil/sumber-daya-manusia.bmkg">Struktur Organisasi</a></li>
                           </ul>
                         </div>
                       </div>
