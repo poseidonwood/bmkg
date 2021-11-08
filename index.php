@@ -128,10 +128,6 @@ include "./partial_/navbar.php";
               </div>
             </div>
             <a href="https://www.bmkg.go.id/cuaca/prakiraan-pon-indonesia.bmkg" target="_blank">
-              <!--
-              <a href="/gempabumi/panduan-evakuasi-gempa-tsunami-situasi-covid19.bmkg" target="_blank">-->
-              <!--<img class="img-responsive" data-original="https://www.bmkg.go.id/asset/img/banner/banner-posko-monitoring-2021.png" alt="">-->
-              <!--<img class="img-responsive" data-original="https://www.bmkg.go.id/asset/img/banner/banner_panduan-evakuasi-gempa-tsunami-di-situasi-covid-19.jpg" alt="">-->
               <img class="img-responsive" data-original="https://www.bmkg.go.id/asset/img/banner/PON-XX-2021.jpg" alt="">
             </a>
 
