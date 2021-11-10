@@ -70,7 +70,7 @@
             </li>
             <li class="dropdown mega-menu-fullwidth">
               <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                Cuaca
+                Prakiraan
               </a>
               <ul class="dropdown-menu">
                 <li>
@@ -99,9 +99,6 @@
                           <ul class="dropdown-link-list">
                             <li><a href="cuaca/cuaca-aktual-bandara.bmkg">Prakiraan Musim Kemarau</a></li>
                             <li><a href="cuaca/prakiraan-cuaca-bandara.bmkg">Prakiraan Musim Hujan</a></li>
-                            <li>
-                              <hr>
-                            </li>
                           </ul>
                         </div>
                       </div>
@@ -110,172 +107,33 @@
                 </li>
               </ul>
             </li>
-
-            <li class="dropdown mega-menu-fullwidth">
+            <li class="dropdown mega-menu-fullwidth home">
               <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                Iklim
+                Pelayanan Data
               </a>
               <ul class="dropdown-menu">
-                <li>
-                  <div class="mega-menu-content">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-md-3 md-margin-bottom-30">
-                          <h2>Prakiraan Iklim</h2>
-                          <ul class="dropdown-link-list">
-                            <li><a href="iklim/prakiraan-hujan-bulanan.bmkg">Prakiraan Hujan Bulanan</a></li>
-                            <li><a href="iklim/prakiraan-hujan-dasarian.bmkg">Prakiraan Hujan Dasarian</a></li>
-                            <li><a href="iklim/prakiraan-musim.bmkg">Prakiraan Musim</a></li>
-                            <li><a href="iklim/potensi-banjir.bmkg">Potensi Banjir Bulanan</a></li>
-                            <li><a href="iklim/potensi-banjir-dasarian.bmkg">Potensi Banjir Dasarian</a></li>
-                          </ul>
-                        </div>
-
-                        <div class="col-md-3 md-margin-bottom-30">
-                          <h2>Analisis Iklim</h2>
-                          <ul class="dropdown-link-list">
-                            <li><a href="iklim/informasi-hujan-bulanan.bmkg">Informasi Hujan Bulanan</a></li>
-                            <li><a href="iklim/dinamika-atmosfir.bmkg">Dinamika Atmosfer</a></li>
-                            <li><a href="iklim/indeks-presipitasi-terstandarisasi.bmkg">Indeks Presipitasi Terstandarisasi</a></li>
-                            <li><a href="iklim/ketersediaan-air-tanah.bmkg">Air Tersedia Bagi Tanaman (ATi)</a></li>
-                          </ul>
-                        </div>
-
-                        <div class="col-md-3 md-margin-bottom-30">
-                          <h2>Informasi Iklim</h2>
-                          <ul class="dropdown-link-list">
-                            <li><a href="http://cews.bmkg.go.id/Peta/Hari_Tanpa_Hujan.bmkg" target="_blank">Informasi Hari Tanpa Hujan</a></li>
-                            <!--<li><a href="iklim/informasi-suhu-muka-laut.bmkg">Informasi Suhu Muka Laut</a></li>-->
-                            <li><a href="iklim/informasi-index-elnino.bmkg">Informasi Index El Nino</a></li>
-                            <!--<li><a href="iklim/informasi-temperatur-subsurface-pasifik.bmkg">Informasi Temperatur Subsurface Pasifik</a></li>-->
-                            <li><a href="iklim/buletin-iklim.bmkg">Buletin Iklim</a></li>
-                          </ul>
-                        </div>
-
-                        <div class="col-md-3 md-margin-bottom-30">
-                          <h2>Perubahan Iklim</h2>
-                          <ul class="dropdown-link-list">
-                            <li><a href="iklim/?p=tren-curah-hujan">Tren Curah Hujan</a></li>
-                            <li><a href="iklim/?p=tren-suhu">Tren Suhu</a></li>
-                            <li><a href="iklim/perubahan-normal-curah-hujan.bmkg">Perubahan Normal Curah Hujan</a></li>
-                            <li><a href="iklim/?p=ekstrem-perubahan-iklim">Ekstrem Perubahan Iklim</a></li>
-                            <li><a href="iklim/?p=proyeksi-perubahan-iklim">Proyeksi Perubahan Iklim</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
+                <li><a href="profil/?p=visi-misi">Katalog Pelayanan</a></li>
+                <li><a href="profil/?p=logo-bmkg">Pelayanan Data PNBP</a></li>
+                <li><a href="profil/sumber-daya-manusia.bmkg">Pelayanan Data 0 Rupiah</a></li>
+                <li><a href="profil/sumber-daya-manusia.bmkg">Survey IKM</a></li>
               </ul>
             </li>
-
-            <li class="dropdown">
+            <li class="dropdown mega-menu-fullwidth home">
               <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                Kualitas Udara
+               Informasi Meteorologi
               </a>
               <ul class="dropdown-menu">
-                <li><a href="kualitas-udara/informasi-so2.bmkg">Informasi SO<sub>2</sub></a></li>
-                <li><a href="kualitas-udara/informasi-no2.bmkg">Informasi NO<sub>2</sub></a></li>
-                <li><a href="kualitas-udara/informasi-spm.bmkg">Informasi SPM</a></li>
-                <li><a href="kualitas-udara/informasi-kimia-air-hujan.bmkg">Informasi Kimia Air Hujan</a></li>
-                <li><a href="kualitas-udara/informasi-ozon.bmkg">Informasi Ozon (O3)</a></li>
-                <li><a href="kualitas-udara/?p=gas-rumah-kaca">Informasi Gas Rumah Kaca</a></li>
-                <li><a href="kualitas-udara/informasi-partikulat-pm10.bmkg">Informasi Partikulat (PM<sub>10</sub>)</a></li>
-                <li><a href="kualitas-udara/informasi-partikulat-pm25.bmkg">Informasi Partikulat (PM<sub>2.5</sub>)</a></li>
-                <!--<li><a href="kualitas-udara/informasi-partikulat-tsp.bmkg">Total Suspended Particulate (TSP)</a></li>-->
+                <li><a href="profil/?p=visi-misi">Curah Hujan</a></li>
+                <li><a href="profil/?p=logo-bmkg">Penyinaran Matahari</a></li>
+                <li><a href="profil/sumber-daya-manusia.bmkg">Suhu Udara</a></li>
+                <li><a href="profil/sumber-daya-manusia.bmkg">Kelembaban Udara</a></li>
+                <li><a href="profil/sumber-daya-manusia.bmkg">Tekanan Udara (QFE)</a></li>
+                <li><a href="profil/sumber-daya-manusia.bmkg">Penguapan</a></li>
               </ul>
             </li>
-
-            <li class="dropdown mega-menu-fullwidth">
-              <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                Gempabumi &amp; Tsunami
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <div class="mega-menu-content">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-md-4 md-margin-bottom-30">
-                          <h2>Gempabumi</h2>
-                          <ul class="dropdown-link-list">
-                            <li><a href="gempabumi/gempabumi-terkini.bmkg">Gempabumi Terkini (M &ge; 5.0)</a></li>
-                            <li><a href="gempabumi/gempabumi-dirasakan.bmkg">Gempabumi Dirasakan</a></li>
-                            <li><a href="gempabumi/antisipasi-gempabumi.bmkg">Antisipasi Gempabumi</a></li>
-                            <li><a href="gempabumi/skala-intensitas-gempabumi.bmkg">Skala Intensitas Gempabumi</a></li>
-                            <li><a href="gempabumi/skala-mmi.bmkg">Skala MMI</a></li>
-                            <li><a href="http://repogempa.bmkg.go.id/" target="_blank">Data Gempabumi</a></li>
-                            <li><a href="gempabumi/katalog-gempabumi-signifikan.bmkg">Katalog Gempabumi Signifikan</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-md-4 md-margin-bottom-30">
-                          <h2>Tsunami</h2>
-                          <ul class="dropdown-link-list">
-                            <li><a href="tsunami">Tsunami</a></li>
-                            <li>
-                              <hr>
-                            </li>
-                          </ul>
-
-                          <h2>Seismologi Teknik</h2>
-                          <ul class="dropdown-link-list">
-                            <li><a href="seismologi-teknik/">Tentang Seismologi Teknik</a></li>
-                            <li><a href="seismologi-teknik/ulasan-guncangan-tanah.bmkg">Ulasan Guncangan Tanah</a></li>
-                            <li><a href="seismologi-teknik/peta-isoseismal.bmkg">Peta Isoseismal</a></li>
-                          </ul>
-                        </div>
-                        <div class="col-md-4 md-margin-bottom-30">
-                          <h2>Geofisika Potensial & Tanda Waktu</h2>
-                          <ul class="dropdown-link-list">
-                            <li><a href="geofisika-potensial/nilai-gravitasi-indonesia.bmkg">Gaya Berat</a></li>
-                            <li><a href="hilal-gerhana/">Informasi Hilal dan Gerhana</a></li>
-                            <li><a href="tanda-waktu/terbit-terbenam-matahari.bmkg">Terbit Terbenam Matahari</a></li>
-                            <li><a href="geofisika-potensial/magnet-bumi.bmkg">Magnet Bumi</a></li>
-                            <li><a href="geofisika-potensial/kalkulator-magnet-bumi.bmkg">Kalkulator Magnet Bumi</a></li>
-                            <li><a href="geofisika-potensial/peta-sambaran-petir.bmkg">Peta Sambaran Petir</a></li>
-                            <li><a href="geofisika-potensial/petir.bmkg">Petir (JABODETABEK)</a></li>
-                            <li><a href="tanda-waktu/?p=ebook-almanak">E-Book Almanak</a></li>
-                            <li><a href="tanda-waktu/?p=ebook-peta-ketinggian-hilal">E-Book Peta Ketinggian Hilal</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </li>
-
-            <li class="dropdown">
-              <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                IT &amp; Sarana Teknis
-              </a>
-              <ul class="dropdown-menu">
-                <li class="dropdown-submenu">
-                  <a href="javascript:void(0);">Instrumentasi, Rekayasa dan Kalibrasi</a>
-                  <ul class="dropdown-menu kir">
-                    <li><a href="#">Instrumentasi</a></li>
-                    <li><a href="#">Peta Instrumentasi BMKG</a></li>
-                    <li><a href="#">Kalibrasi</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown-submenu">
-                  <a href="javascript:void(0);">Jaringan Komunikasi</a>
-                  <ul class="dropdown-menu kir">
-                    <li><a href="email/?p=syarat-ketentuan-pembuatan">Email BMKG</a></li>
-                    <li><a href="jaringan-komunikasi/?p=layanan">Layanan Jaringan Komunikasi</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown-submenu">
-                  <a href="javascript:void(0);">Database</a>
-                  <ul class="dropdown-menu kir">
-                    <li><a href="http://dataonline.bmkg.go.id/" target="_blank">Data Online</a></li>
-                    <li><a href="database/?p=tentang-database">Tentang Database</a></li>
-                    <li><a href="database/?p=alur-pengumpulan-data">Alur Pengumpulan Data</a></li>
-                    <li><a href="database/?p=jenis-data">Jenis Data</a></li>
-                    <li><a href="database/?p=pengetahuan">Pengetahuan</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
+            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+             Berita
+            </a>
           </ul>
         </div>
       </div>
