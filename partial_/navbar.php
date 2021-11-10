@@ -67,13 +67,11 @@
                   <div class="mega-menu-content">
                     <div class="container">
                       <div class="row">
-                        <div class="col-md-4 md-margin-bottom-30">
                           <ul class="dropdown-link-list">
                             <li><a href="profil/?p=visi-misi">Visi dan Misi</a></li>
                             <li><a href="profil/?p=logo-bmkg">SDM</a></li>
                             <li><a href="profil/sumber-daya-manusia.bmkg">Struktur Organisasi</a></li>
                           </ul>
-                        </div>
                       </div>
                     </div>
                   </div>
