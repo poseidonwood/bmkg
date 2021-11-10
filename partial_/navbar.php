@@ -80,29 +80,25 @@
                         <div class="col-md-4 md-margin-bottom-30">
                           <h2>Prakiraan Cuaca</h2>
                           <ul class="dropdown-link-list">
-                            <li><a href="cuaca/prakiraan-cuaca-dunia.bmkg">Prakiraan Cuaca Dunia</a></li>
-                            <li><a href="cuaca/prakiraan-cuaca-indonesia.bmkg">Prakiraan Cuaca Indonesia</a></li>
-                            <li><a href="cuaca/prakiraan-cuaca-indonesia.bmkg?Prov=07&NamaProv=DKI%20Jakarta">Prakiraan Cuaca DKI Jakarta</a></li>
-                            <li><a href="cuaca/cuaca-berbasis-dampak.bmkg">Prakiraan Cuaca Berbasis Dampak</a></li>
-                            <li><a href="cuaca/prakiraan-pon-indonesia.bmkg">Prakiraan Cuaca PON 2021</a></li>
-                            <li><a href="http://web.meteo.bmkg.go.id?fromURL=www.bmkg.go.id" target="_blank">Informasi Selengkapnya</a></li>
+                            <li><a href="cuaca/prakiraan-cuaca-dunia.bmkg">Prakiraan Cuaca Kab. Tuban</a></li>
+                            <li><a href="cuaca/prakiraan-cuaca-indonesia.bmkg">Prakiraan Cuaca Kab. Lamongan</a></li>
+                            <li><a href="cuaca/prakiraan-cuaca-indonesia.bmkg?Prov=07&NamaProv=DKI%20Jakarta">Prakiraan Cuaca Kab. Bojonegoro</a></li>
                             <li>
                               <hr>
                             </li>
                           </ul>
-                          <h2>Prospek Cuaca Harian</h2>
+                          <h2>PRAKIRAAN MARITIM</h2>
                           <ul class="dropdown-link-list">
-                            <li><a href="cuaca/ikhtisar-cuaca-harian.bmkg">Ikhtisar Cuaca Harian</a></li>
-                            <li><a href="cuaca/prakiraan-cuaca-tigaharian.bmkg">Prospek Cuaca Tiga Harian</a></li>
-                            <li><a href="cuaca/prakiraan-cuaca-mingguan.bmkg">Prospek Cuaca Mingguan</a></li>
+                            <li><a href="cuaca/ikhtisar-cuaca-harian.bmkg">Perairan Tuban-Lamongan</a></li>
+                            <li><a href="cuaca/prakiraan-cuaca-tigaharian.bmkg">Laut Jawa Bag. Selatan Bawean</a></li>
+                            <li><a href="cuaca/prakiraan-cuaca-mingguan.bmkg">Informasi Pasang Surut Wilayah Tuban</a></li>
                           </ul>
                         </div>
                         <div class="col-md-4 md-margin-bottom-30">
-                          <h2>Cuaca Penerbangan</h2>
+                          <h2>PRAKIRAAN IKLIM</h2>
                           <ul class="dropdown-link-list">
-                            <li><a href="cuaca/cuaca-aktual-bandara.bmkg">Laporan Cuaca Aktual Bandara</a></li>
-                            <li><a href="cuaca/prakiraan-cuaca-bandara.bmkg">Prakiraan Cuaca Bandara</a></li>
-                            <li><a href="http://aviation.bmkg.go.id?fromURL=www.bmkg.go.id" target="_blank">Informasi Selengkapnya</a></li>
+                            <li><a href="cuaca/cuaca-aktual-bandara.bmkg">Prakiraan Musim Kemarau</a></li>
+                            <li><a href="cuaca/prakiraan-cuaca-bandara.bmkg">Prakiraan Musim Hujan</a></li>
                             <li>
                               <hr>
                             </li>
