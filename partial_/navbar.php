@@ -58,14 +58,26 @@
       <div class="collapse navbar-collapse navbar-responsive-collapse">
         <div class="res-container">
           <ul class="nav navbar-nav">
-            <li class="dropdown mega-menu-fullwidth home">
+            <li class="dropdown mega-menu-fullwidth">
               <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
                 Profil
               </a>
               <ul class="dropdown-menu">
-                <li><a href="profil/?p=visi-misi">Visi dan Misi</a></li>
-                <li><a href="profil/?p=logo-bmkg">SDM</a></li>
-                <li><a href="profil/sumber-daya-manusia.bmkg">Struktur Organisasi</a></li>
+                <li>
+                  <div class="mega-menu-content">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-4 md-margin-bottom-30">
+                          <ul class="dropdown-link-list">
+                            <li><a href="profil/?p=visi-misi">Visi dan Misi</a></li>
+                            <li><a href="profil/?p=logo-bmkg">SDM</a></li>
+                            <li><a href="profil/sumber-daya-manusia.bmkg">Struktur Organisasi</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
               </ul>
             </li>
             <li class="dropdown mega-menu-fullwidth">
