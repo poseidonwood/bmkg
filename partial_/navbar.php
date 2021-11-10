@@ -22,7 +22,7 @@
             <li class="hidden-sm hidden-md hidden-lg hari-digit"><?= tanggal_indo(date('Y-m-d'), true); ?></li>
             <li class="hidden-sm hidden-md hidden-lg" id="timecontainer1"></li>
             <script type="text/javascript">
-              new showLocalTime("timecontainer1", "server-asp", 0, "short")
+            new showLocalTime("timecontainer1", "server-asp", 0, "short")
             </script>
           </ul>
         </div>
@@ -30,7 +30,7 @@
           <!--<i class="fa fa-search search-btn pull-right hidden-xs"></i>-->
           <div id="timecontainer" class="topbar-time pull-right hidden-xs"></div>
           <script type="text/javascript">
-            new showLocalTime("timecontainer", "server-asp", 0, "short")
+          new showLocalTime("timecontainer", "server-asp", 0, "short")
           </script>
         </div>
       </div>
@@ -87,6 +87,9 @@
                               <hr>
                             </li>
                           </ul>
+
+                        </div>
+                        <div class="col-md-4 md-margin-bottom-30">
                           <h2>PRAKIRAAN MARITIM</h2>
                           <ul class="dropdown-link-list">
                             <li><a href="cuaca/ikhtisar-cuaca-harian.bmkg">Perairan Tuban-Lamongan</a></li>
@@ -102,33 +105,6 @@
                             <li>
                               <hr>
                             </li>
-                          </ul>
-
-                          <h2>Cuaca Maritim</h2>
-                          <ul class="dropdown-link-list">
-                            <li><a href="cuaca/peringatan-gelombang-tinggi.bmkg">Peringatan Gelombang Tinggi</a></li>
-                            <li><a href="http://maritim.bmkg.go.id?fromURL=www.bmkg.go.id" target="_blank">Prakiraan Cuaca Wilayah Pelayanan</a></li>
-                            <li><a href="http://maritim.bmkg.go.id?fromURL=www.bmkg.go.id" target="_blank">Prakiraan Tinggi Gelombang</a></li>
-                            <li><a href="http://maritim.bmkg.go.id?fromURL=www.bmkg.go.id" target="_blank">Prakiraan Cuaca Pelabuhan</a></li>
-                            <!--<li><a href="http://maritim.bmkg.go.id?fromURL=www.bmkg.go.id" target="_blank">Informasi Selengkapnya</a></li>-->
-                          </ul>
-                        </div>
-                        <div class="col-md-4 md-margin-bottom-30">
-                          <h2>Pengindraan Jauh</h2>
-                          <ul class="dropdown-link-list">
-                            <li><a href="satelit/">Citra Satelit</a></li>
-                            <li><a href="cuaca/citra-radar.bmkg">Citra Radar</a></li>
-                            <li><a href="cuaca/indeks-uv.bmkg">Indeks Sinar Ultraviolet (UV)</a></li>
-                            <li>
-                              <hr>
-                            </li>
-                            <li><a href="cuaca/prakiraan-angin.bmkg">Prakiraan Angin</a></li>
-                            <!--<li><a href="cuaca/potensi-banjir-jakarta.bmkg">Potensi Banjir Jakarta (Harian)</a></li>
-															<li><a href="#">Analisis Curah Hujan Harian JABODETABEK (Isohyet)</a></li>-->
-                            <li><a href="cuaca/probabilistik-curah-hujan.bmkg">Probabilistik Curah Hujan</a></li>
-                            <li><a href="cuaca/cuaca-berbasis-dampak.bmkg">Prakiraan Cuaca Berbasis Dampak</a></li>
-                            <li><a href="cuaca/kebakaran-hutan.bmkg">Kebakaran Hutan dan Lahan (SPARTAN)</a></li>
-                            <li><a href="http://tcwc.bmkg.go.id/siklon" target="_blank">Siklon Tropis</a></li>
                           </ul>
                         </div>
                       </div>
