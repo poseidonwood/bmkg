@@ -83,9 +83,6 @@
                             <li><a href="cuaca/prakiraan-cuaca-dunia.bmkg">Prakiraan Cuaca Kab. Tuban</a></li>
                             <li><a href="cuaca/prakiraan-cuaca-indonesia.bmkg">Prakiraan Cuaca Kab. Lamongan</a></li>
                             <li><a href="cuaca/prakiraan-cuaca-indonesia.bmkg?Prov=07&NamaProv=DKI%20Jakarta">Prakiraan Cuaca Kab. Bojonegoro</a></li>
-                            <li>
-                              <hr>
-                            </li>
                           </ul>
 
                         </div>
