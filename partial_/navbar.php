@@ -107,7 +107,7 @@
                 </li>
               </ul>
             </li>
-            <li class="dropdown mega-menu-fullwidth home">
+            <li class="dropdown mega-menu-fullwidth">
               <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
                 Pelayanan Data
               </a>
@@ -118,7 +118,7 @@
                 <li><a href="profil/sumber-daya-manusia.bmkg">Survey IKM</a></li>
               </ul>
             </li>
-            <li class="dropdown mega-menu-fullwidth home">
+            <li class="dropdown mega-menu-fullwidth">
               <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
                 Informasi Meteorologi
               </a>
@@ -131,7 +131,7 @@
                 <li><a href="profil/sumber-daya-manusia.bmkg">Penguapan</a></li>
               </ul>
             </li>
-            <li class="dropdown mega-menu-fullwidth home">
+            <li class="dropdown mega-menu-fullwidth">
               <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
                 Berita
               </a>
