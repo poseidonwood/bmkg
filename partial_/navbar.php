@@ -120,7 +120,7 @@
             </li>
             <li class="dropdown mega-menu-fullwidth home">
               <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-               Informasi Meteorologi
+                Informasi Meteorologi
               </a>
               <ul class="dropdown-menu">
                 <li><a href="profil/?p=visi-misi">Curah Hujan</a></li>
@@ -131,9 +131,11 @@
                 <li><a href="profil/sumber-daya-manusia.bmkg">Penguapan</a></li>
               </ul>
             </li>
-            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-             Berita
-            </a>
+            <li class="dropdown mega-menu-fullwidth home">
+              <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+                Berita
+              </a>
+            </li>
           </ul>
         </div>
       </div>
