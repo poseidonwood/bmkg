@@ -80,9 +80,9 @@
                         <div class="col-md-4 md-margin-bottom-30">
                           <h2>Prakiraan Cuaca</h2>
                           <ul class="dropdown-link-list">
-                            <li><a href="cuaca/prakiraan-cuaca-dunia.bmkg">Prakiraan Cuaca Kab. Tuban</a></li>
-                            <li><a href="cuaca/prakiraan-cuaca-indonesia.bmkg">Prakiraan Cuaca Kab. Lamongan</a></li>
-                            <li><a href="cuaca/prakiraan-cuaca-indonesia.bmkg?Prov=07&NamaProv=DKI%20Jakarta">Prakiraan Cuaca Kab. Bojonegoro</a></li>
+                            <li><a href="<?=$main_url."prakiraan_cuaca_tuban";?>">Prakiraan Cuaca Kab. Tuban</a></li>
+                            <li><a href="<?=$main_url."prakiraan_cuaca_lamongan";?>">Prakiraan Cuaca Kab. Lamongan</a></li>
+                            <li><a href="<?=$main_url."prakiraan_cuaca_bojonegoro";?>">Prakiraan Cuaca Kab. Bojonegoro</a></li>
                           </ul>
 
                         </div>
