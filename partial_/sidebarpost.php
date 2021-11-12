@@ -1,5 +1,4 @@
-</div>
-</div>
+
 <div class="col-md-4">
   <div class="headline"><h4>Info Aktual</h4></div>
   <div class="press-release-home-bg">
@@ -50,9 +49,5 @@
         </ul>
       </div>
     </div>
-
   </div>
-
-</div>
-</div>
 </div>

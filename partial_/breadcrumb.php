@@ -1,7 +1,8 @@
 <?php
 $segments = explode('/', trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/'));
 $numSegments = count($segments);
-$currentSegment = $segments[$numSegments - 1];
+$currentSegment_raw = $segments[$numSegments - 1];
+$currentSegment = str_replace(array("_")," ",$currentSegment_raw);
 
 // echo 'Current Segment: ' , $currentSegment;
 ?>

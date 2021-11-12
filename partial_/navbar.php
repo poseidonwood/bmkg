@@ -48,7 +48,7 @@
         </button>
 
         <div class="navbar-brand">
-          <a href="/?lang=ID">
+          <a href="<?=$main_url;?>">
             <img src="https://bmkg.go.id/asset/img/logo/logo-bmkg.png" alt="Logo">
             <span class="hidden-xs hidden-md">Stasiun Meteorologi Tuban</span>
           </a>
@@ -64,8 +64,8 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a href="<?=$main_url."profile";?>">Visi dan Misi</a></li>
-                <li><a href="profil/?p=logo-bmkg">SDM</a></li>
-                <li><a href="profil/sumber-daya-manusia.bmkg">Struktur Organisasi</a></li>
+                <li><a href="<?=$main_url."personel";?>">SDM</a></li>
+                <li><a href="<?=$main_url."struktur_organisasi";?>">Struktur Organisasi</a></li>
               </ul>
             </li>
             <li class="dropdown mega-menu-fullwidth">
