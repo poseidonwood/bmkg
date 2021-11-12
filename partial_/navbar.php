@@ -58,24 +58,14 @@
       <div class="collapse navbar-collapse navbar-responsive-collapse">
         <div class="res-container">
           <ul class="nav navbar-nav">
-            <li class="dropdown mega-menu-fullwidth">
+            <li class="dropdown">
               <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-                Profil
+                Profile
               </a>
               <ul class="dropdown-menu">
-                <li>
-                  <div class="mega-menu-content">
-                    <div class="container">
-                      <div class="row">
-                          <ul class="dropdown-link-list">
-                            <li><a href="profil/?p=visi-misi">Visi dan Misi</a></li>
-                            <li><a href="profil/?p=logo-bmkg">SDM</a></li>
-                            <li><a href="profil/sumber-daya-manusia.bmkg">Struktur Organisasi</a></li>
-                          </ul>
-                      </div>
-                    </div>
-                  </div>
-                </li>
+                <li><a href="<?=$main_url."profile";?>">Visi dan Misi</a></li>
+                <li><a href="profil/?p=logo-bmkg">SDM</a></li>
+                <li><a href="profil/sumber-daya-manusia.bmkg">Struktur Organisasi</a></li>
               </ul>
             </li>
             <li class="dropdown mega-menu-fullwidth">
@@ -117,7 +107,7 @@
                 </li>
               </ul>
             </li>
-            <li class="dropdown mega-menu-fullwidth">
+            <li class="dropdown">
               <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
                 Pelayanan Data
               </a>
@@ -128,7 +118,8 @@
                 <li><a href="profil/sumber-daya-manusia.bmkg">Survey IKM</a></li>
               </ul>
             </li>
-            <li class="dropdown mega-menu-fullwidth">
+
+            <li class="dropdown">
               <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
                 Informasi Meteorologi
               </a>
