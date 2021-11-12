@@ -52,6 +52,7 @@ include "./partial_/breadcrumb.php";
   </div>
 </div>
 <?php
+echo "</div></div>";
 include "./partial_/sidebarpost.php";
 include "./partial_/footer.php";
 ?>

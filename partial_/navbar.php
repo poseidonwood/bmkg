@@ -112,8 +112,8 @@
                 Pelayanan Data
               </a>
               <ul class="dropdown-menu">
-                <li><a href="profil/?p=visi-misi">Katalog Pelayanan</a></li>
-                <li><a href="profil/?p=logo-bmkg">Pelayanan Data PNBP</a></li>
+                <li><a href="<?=$main_url."katalog_pelayanan";?>">Katalog Pelayanan</a></li>
+                <li><a href="<?=$main_url."pnbp";?>">Pelayanan Data PNBP</a></li>
                 <li><a href="profil/sumber-daya-manusia.bmkg">Pelayanan Data 0 Rupiah</a></li>
                 <li><a href="profil/sumber-daya-manusia.bmkg">Survey IKM</a></li>
               </ul>
