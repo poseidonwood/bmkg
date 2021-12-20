@@ -379,83 +379,83 @@ include "./partial_/navbar.php";
     </section>
 
 
-    <section id="partner" class="margin-bottom-30">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12md-margin-bottom-20">
-            <div class="banner-layanan-home owl-carousel-v1">
-              <div class="owl-banner-layanan">
+<!--    <section id="partner" class="margin-bottom-30">-->
+<!--      <div class="container">-->
+<!--        <div class="row">-->
+<!--          <div class="col-xs-12md-margin-bottom-20">-->
+<!--            <div class="banner-layanan-home owl-carousel-v1">-->
+<!--              <div class="owl-banner-layanan">-->
                 <!--<div class="col-md-12">
-                <a href="#">
-                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/bersatu-lawan-terorisme.jpg" alt="Bersatu Lawan Terorisme">
-              </a>
-            </div>-->
-            <div class="col-md-12">
-              <a href="https://www.wmo.int/" target="_blank">
-                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/banner-wmo.jpg" alt="WMO">
-              </a>
-            </div>
-            <div class="col-md-12">
-              <a href="http://epengawasan.bmkg.go.id/wbs/" target="_blank">
-                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/banner-epengawasan.jpg" alt="E-Pengawasan">
-              </a>
-            </div>
-            <div class="col-md-12">
-              <a href="https://www.lapor.go.id/" target="_blank">
-                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/Lapor-UKP4.jpg" alt="LAPOR!">
-              </a>
-            </div>
-            <div class="col-md-12">
-              <a href="https://www.bmkg.go.id/rb" target="_blank">
-                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/banner-reformasi-birokrasi.jpg" alt="Reformasi Birokrasi BMKG">
-              </a>
-            </div>
-            <div class="col-md-12">
-              <a href="https://www.bmkg.go.id/profil/?p=stop-pungli-bmkg" target="_blank">
-                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/saber-pungli.jpg" alt="Saber Pungli">
-              </a>
-            </div>
-            <div class="col-md-12">
-              <a href="http://dataonline.bmkg.go.id/home" target="_blank">
-                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/banner_data_online.jpg" alt="Data Online">
-              </a>
-            </div>
-            <div class="col-md-12">
-              <a href="http://puslitbang.bmkg.go.id/jmg" target="_blank">
-                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/banner-journalMG.jpg" alt="Jurnal Meteorologi dan Geofisika">
-              </a>
-            </div>
-            <div class="col-md-12">
-              <a href="http://inatews.bmkg.go.id/new/query_gmpqc.php" target="_blank">
-                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/dataGempa.jpg" alt="Data Gempabumi">
-              </a>
-            </div>
-            <div class="col-md-12">
-              <a href="https://www.bmkg.go.id/geofisika-potensial/kalkulator-magnet-bumi.bmkg" target="_blank">
-                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/kalkulator-magnet.jpg" alt="Kalkulator Magnet Bumi">
-              </a>
-            </div>
-            <div class="col-md-12">
-              <a href="#">
-                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/mottobmkg.jpg" alt="Motto BMKG">
-              </a>
-            </div>
-            <div class="col-md-12">
-              <a href="https://www.bmkg.go.id/profil/?p=maklumat-pelayanan">
-                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/maklumatpelayanan.jpg" alt="Maklumat Pelayanan">
-              </a>
-            </div>
-            <div class="col-md-12">
-              <a href="http://lpse.bmkg.go.id" target="_blank">
-                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/lpse.jpg" alt="LPSE">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!--                <a href="#">-->
+<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/bersatu-lawan-terorisme.jpg" alt="Bersatu Lawan Terorisme">-->
+<!--              </a>-->
+<!--            </div>-->-->
+<!--            <div class="col-md-12">-->
+<!--              <a href="https://www.wmo.int/" target="_blank">-->
+<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/banner-wmo.jpg" alt="WMO">-->
+<!--              </a>-->
+<!--            </div>-->
+<!--            <div class="col-md-12">-->
+<!--              <a href="http://epengawasan.bmkg.go.id/wbs/" target="_blank">-->
+<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/banner-epengawasan.jpg" alt="E-Pengawasan">-->
+<!--              </a>-->
+<!--            </div>-->
+<!--            <div class="col-md-12">-->
+<!--              <a href="https://www.lapor.go.id/" target="_blank">-->
+<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/Lapor-UKP4.jpg" alt="LAPOR!">-->
+<!--              </a>-->
+<!--            </div>-->
+<!--            <div class="col-md-12">-->
+<!--              <a href="https://www.bmkg.go.id/rb" target="_blank">-->
+<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/banner-reformasi-birokrasi.jpg" alt="Reformasi Birokrasi BMKG">-->
+<!--              </a>-->
+<!--            </div>-->
+<!--            <div class="col-md-12">-->
+<!--              <a href="https://www.bmkg.go.id/profil/?p=stop-pungli-bmkg" target="_blank">-->
+<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/saber-pungli.jpg" alt="Saber Pungli">-->
+<!--              </a>-->
+<!--            </div>-->
+<!--            <div class="col-md-12">-->
+<!--              <a href="http://dataonline.bmkg.go.id/home" target="_blank">-->
+<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/banner_data_online.jpg" alt="Data Online">-->
+<!--              </a>-->
+<!--            </div>-->
+<!--            <div class="col-md-12">-->
+<!--              <a href="http://puslitbang.bmkg.go.id/jmg" target="_blank">-->
+<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/banner-journalMG.jpg" alt="Jurnal Meteorologi dan Geofisika">-->
+<!--              </a>-->
+<!--            </div>-->
+<!--            <div class="col-md-12">-->
+<!--              <a href="http://inatews.bmkg.go.id/new/query_gmpqc.php" target="_blank">-->
+<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/dataGempa.jpg" alt="Data Gempabumi">-->
+<!--              </a>-->
+<!--            </div>-->
+<!--            <div class="col-md-12">-->
+<!--              <a href="https://www.bmkg.go.id/geofisika-potensial/kalkulator-magnet-bumi.bmkg" target="_blank">-->
+<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/kalkulator-magnet.jpg" alt="Kalkulator Magnet Bumi">-->
+<!--              </a>-->
+<!--            </div>-->
+<!--            <div class="col-md-12">-->
+<!--              <a href="#">-->
+<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/mottobmkg.jpg" alt="Motto BMKG">-->
+<!--              </a>-->
+<!--            </div>-->
+<!--            <div class="col-md-12">-->
+<!--              <a href="https://www.bmkg.go.id/profil/?p=maklumat-pelayanan">-->
+<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/maklumatpelayanan.jpg" alt="Maklumat Pelayanan">-->
+<!--              </a>-->
+<!--            </div>-->
+<!--            <div class="col-md-12">-->
+<!--              <a href="http://lpse.bmkg.go.id" target="_blank">-->
+<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/lpse.jpg" alt="LPSE">-->
+<!--              </a>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
 <?php
 include "./partial_/footer.php";
 ?>
