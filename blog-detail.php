@@ -1,6 +1,19 @@
 <?php
+if(!isset($_REQUEST['p']) || $_REQUEST['p'] == ""){
+  echo "<script>alert('Wrong Access');</script>";
+  echo "<meta http-equiv='refresh' content='0;url=./error404.php' />";
+  die;
+}
 include "./partial_/header.php";
 include "./partial_/navbar.php";
+$idpost = $_REQUEST['p'];
+$getdatapost = getSingleRowDB("post","id", $idpost);
+if($getdatapost == NULL){
+  echo "<script>alert('Wrong Access');</script>";
+  echo "<meta http-equiv='refresh' content='0;url=./error404.php' />";
+}
+// var_dump($getdatapost);
+// exit;
 ?>
 <div class="breadcrumbs breadcrumbs-light">
   <div class="container">

@@ -62,14 +62,15 @@
 
           <div class="col-md-3 col-sm-6 md-margin-bottom-30">
             <!-- include file="includes/widget_media_streaming.bmkg" -->
-            <h2>Media BMKG</h2>
-            <iframe width="300" height="115" src="https://www.youtube.com/embed/Cw9EbKXi2cY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <h4><a href="https://www.bmkg.go.id/video/?p=kaleidoskop-bmkg-2019-dan-outlook-bmkg-2020" target="_blank">Kaleidoskop BMKG 2019 dan Outlook BMKG 2020 .</a></h4>
             <?php
-            // counter();	//menjalankan function counter
-            ?>
-            <script type="text/javascript" src="https://freehitcounters.org/count/9mc4"></script><br>
-            <a href='http://www.counter-zaehler.de'>blogspot besucherzähler</a> <script type='text/javascript' src='https://whomania.com/ctr?id=4c07a00c499023a0d4f953855af5de0eb540831a'></script>
+            if($mode !== 'developt'){
+              ?>
+              <h2>Media BMKG</h2>
+              <iframe width="300" height="115" src="https://www.youtube.com/embed/Cw9EbKXi2cY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <h4><a href="https://www.bmkg.go.id/video/?p=kaleidoskop-bmkg-2019-dan-outlook-bmkg-2020" target="_blank">Kaleidoskop BMKG 2019 dan Outlook BMKG 2020 .</a></h4>
+              <script type="text/javascript" src="https://freehitcounters.org/count/9mc4"></script><br>
+              <a href='http://www.counter-zaehler.de'>blogspot besucherzähler</a> <script type='text/javascript' src='https://whomania.com/ctr?id=4c07a00c499023a0d4f953855af5de0eb540831a'></script>
+            <?php }?>
           </div>
         </div>
       </div>

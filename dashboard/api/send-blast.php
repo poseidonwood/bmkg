@@ -28,7 +28,7 @@ if(!isset($nomor) && !isset($pesan) && !isset($data['jadwal']) && !isset($media)
 }
 
 $img_name = md5(time().rand(1,999)).".png";
-$url = $base_url."uploads/".$img_name;
+$url = $dashboard_url."uploads/".$img_name;
 $urls = base64upload($media, "../uploads/".$img_name);
 
 $jadwal = date("Y-m-d H:i:s", strtotime($data['jadwal']));

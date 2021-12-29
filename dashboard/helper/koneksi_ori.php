@@ -25,4 +25,4 @@ $isSSL = function () {
 };
 
 $prot = $isSSL() ? 'https://' : 'http://';
-$base_url  = $prot ."localhost/bmkg/dashboard/";
+$dashboard_url  = $prot ."localhost/bmkg/dashboard/";

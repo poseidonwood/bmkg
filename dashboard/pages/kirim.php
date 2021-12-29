@@ -39,7 +39,7 @@ if (post("pesan")) {
 
         move_uploaded_file($_FILES['media']['tmp_name'], 'uploads/' . $filename);
         // Insert it into our tracking along with the original name
-        $media = $base_url . "pages/uploads/" . $filename;
+        $media = $dashboard_url . "pages/uploads/" . $filename;
     } else {
         $media = null;
     }
@@ -128,7 +128,7 @@ if (post("pesan2")) {
 
         move_uploaded_file($_FILES['media']['tmp_name'], 'uploads/' . $filename);
         // Insert it into our tracking along with the original name
-        $media = $base_url . "pages/uploads/" . $filename;
+        $media = $dashboard_url . "pages/uploads/" . $filename;
     } else {
         $media = null;
     }
@@ -297,7 +297,7 @@ require_once('../templates/header.php');
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="<?= $base_url; ?>auth/logout.php">Logout</a>
+                <a class="btn btn-primary" href="<?= $dashboard_url; ?>auth/logout.php">Logout</a>
             </div>
         </div>
     </div>
@@ -437,21 +437,21 @@ require_once('../templates/header.php');
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="<?= $base_url; ?>vendor/jquery/jquery.min.js"></script>
-<script src="<?= $base_url; ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<?= $dashboard_url; ?>vendor/jquery/jquery.min.js"></script>
+<script src="<?= $dashboard_url; ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="<?= $base_url; ?>vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="<?= $dashboard_url; ?>vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="<?= $base_url; ?>js/sb-admin-2.min.js"></script>
+<script src="<?= $dashboard_url; ?>js/sb-admin-2.min.js"></script>
 
 <!-- Page level plugins -->
-<script src="<?= $base_url; ?>vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="<?= $base_url; ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="<?= $dashboard_url; ?>vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="<?= $dashboard_url; ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
 <!-- Page level custom scripts -->
-<script src="<?= $base_url; ?>js/demo/datatables-demo.js"></script>
+<script src="<?= $dashboard_url; ?>js/demo/datatables-demo.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous"></script>
 <script>

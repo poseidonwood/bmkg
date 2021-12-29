@@ -12,7 +12,7 @@ if (post("pesan")) {
     $pesan = post("pesan");
     $sender = post("sender");
 
-    //toastr_set("error", "fitur dimatikan sementara"); 
+    //toastr_set("error", "fitur dimatikan sementara");
     $res = sendMSG($nomor, $pesan, $sender);
     // var_dump($nomor, $pesan, $sender);
     // die;
@@ -153,28 +153,28 @@ require('../templates/header.php')
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="<?= $base_url; ?>auth/logout.php">Logout</a>
+                <a class="btn btn-primary" href="<?= $dashboard_url; ?>auth/logout.php">Logout</a>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="<?= $base_url; ?>vendor/jquery/jquery.min.js"></script>
-<script src="<?= $base_url; ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<?= $dashboard_url; ?>vendor/jquery/jquery.min.js"></script>
+<script src="<?= $dashboard_url; ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="<?= $base_url; ?>vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="<?= $dashboard_url; ?>vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="<?= $base_url; ?>js/sb-admin-2.min.js"></script>
+<script src="<?= $dashboard_url; ?>js/sb-admin-2.min.js"></script>
 
 <!-- Page level plugins -->
-<script src="<?= $base_url; ?>vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="<?= $base_url; ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="<?= $dashboard_url; ?>vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="<?= $dashboard_url; ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
 <!-- Page level custom scripts -->
-<script src="<?= $base_url; ?>js/demo/datatables-demo.js"></script>
+<script src="<?= $dashboard_url; ?>js/demo/datatables-demo.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous"></script>
 <script>

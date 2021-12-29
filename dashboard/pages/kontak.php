@@ -62,8 +62,8 @@ require_once('../templates/header.php');
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary" style="display: contents">Data Nomor</h6>
             <a class="btn btn-danger float-right" href="kontak.php?act=delete_all" style="margin:5px">Hapus Semua</a>
-            <a class="btn btn-info float-right" href="<?= $base_url; ?>lib/kontakgroup.php" style="margin:5px">Export Kontak Group (excel)</a>
-            <a class="btn btn-info float-right" href="<?= $base_url; ?>lib/kontakpersonal.php" style="margin:5px">Export Kontak Personal (excel)</a>
+            <a class="btn btn-info float-right" href="<?= $dashboard_url; ?>lib/kontakgroup.php" style="margin:5px">Export Kontak Group (excel)</a>
+            <a class="btn btn-info float-right" href="<?= $dashboard_url; ?>lib/kontakpersonal.php" style="margin:5px">Export Kontak Personal (excel)</a>
             <button type="submit" class="btn btn-info float-right" data-toggle="modal" style="margin:5px" data-target="#ambilkontak">
                 Ambil Kontak
             </button>
@@ -142,7 +142,7 @@ require_once('../templates/header.php');
             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="<?= $base_url; ?>auth/logout.php">Logout</a>
+                <a class="btn btn-primary" href="<?= $dashboard_url; ?>auth/logout.php">Logout</a>
             </div>
         </div>
     </div>
@@ -239,7 +239,7 @@ require_once('../templates/header.php');
                     <label> Kolom pesan ke </label>
                     <input type="text" name="d" required class="form-control" value="3">
                     <br>
-                    <p> Download file contoh <a href="<?= $base_url; ?>excel/contoh.xlsx" target="_blank">disini</a> </p>
+                    <p> Download file contoh <a href="<?= $dashboard_url; ?>excel/contoh.xlsx" target="_blank">disini</a> </p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -251,21 +251,21 @@ require_once('../templates/header.php');
 </div>
 
 <!-- Bootstrap core JavaScript-->
-<script src="<?= $base_url; ?>vendor/jquery/jquery.min.js"></script>
-<script src="<?= $base_url; ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<?= $dashboard_url; ?>vendor/jquery/jquery.min.js"></script>
+<script src="<?= $dashboard_url; ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="<?= $base_url; ?>vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="<?= $dashboard_url; ?>vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="<?= $base_url; ?>js/sb-admin-2.min.js"></script>
+<script src="<?= $dashboard_url; ?>js/sb-admin-2.min.js"></script>
 
 <!-- Page level plugins -->
-<script src="<?= $base_url; ?>vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="<?= $base_url; ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="<?= $dashboard_url; ?>vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="<?= $dashboard_url; ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
 <!-- Page level custom scripts -->
-<script src="<?= $base_url; ?>js/demo/datatables-demo.js"></script>
+<script src="<?= $dashboard_url; ?>js/demo/datatables-demo.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous"></script>
 <script>

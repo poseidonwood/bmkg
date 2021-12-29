@@ -43,8 +43,10 @@ include "./partial_/navbar.php";
               <div class="owl-peringatan-dini">
                 <?php
                 $datagemlombangdini = gelombangdini();
-                foreach ($datagemlombangdini['data'] as $gelombangdata) {
-                  echo "<div><strong>".$gelombangdata['time_desc']." | ".$datagemlombangdini['name']."</strong>".$gelombangdata['warning_desc']."<a class='moree'></a> <a class='link-block' href='cuaca/prakiraan-cuaca-indonesia.bmkg?Prov=27&NamaProv=Sulawesi Barat'></a></div>";
+                if(is_array($datagemlombangdini)){
+                  foreach ($datagemlombangdini['data'] as $gelombangdata) {
+                    echo "<div><strong>".$gelombangdata['time_desc']." | ".$datagemlombangdini['name']."</strong>".$gelombangdata['warning_desc']."<a class='moree'></a> <a class='link-block' href='cuaca/prakiraan-cuaca-indonesia.bmkg?Prov=27&NamaProv=Sulawesi Barat'></a></div>";
+                  }
                 }
                 ?>
               </div>
@@ -65,7 +67,7 @@ include "./partial_/navbar.php";
           <div class="row">
             <div class="col-md-6 col-xs-6">
               <a href="https://ews.bmkg.go.id/tews/data/<?= $getgempaterkini['Shakemap']; ?>" class="fancybox img-hover-v1" rel="gallery1" title="Gempabumi Terkini">
-                <img class="img-responsive" src="https://ews.bmkg.go.id/tews/data/<?= $getgempaterkini['Shakemap']; ?>" alt="">
+                <img onerror="this.style.display='none'"  class="img-responsive" src="https://ews.bmkg.go.id/tews/data/<?= $getgempaterkini['Shakemap']; ?>" alt="" onerror="this.style.display='none'">
               </a>
             </div>
             <div class="col-md-6 col-xs-6 gempabumi-detail no-padding">
@@ -112,11 +114,11 @@ include "./partial_/navbar.php";
                     $filename = $sliderpost['thumb'];
                     ?>
                     <div class="ms-slide blog-slider">
-                      <img src="asset/plugins/master-slider/masterslider/style/blank.gif" data-src="<?=$main_url."asset/images/post/".$filename;?>" />
+                      <img onerror="this.style.display='none'"  src="asset/plugins/master-slider/masterslider/style/blank.gif" data-src="<?=$main_url."asset/images/post/".$filename;?>" />
                       <div class="ms-info"></div>
                       <div class="blog-slider-title">
                         <span class="blog-slider-posted"><?=date("d-m-Y",$slidercreated);?></span>
-                        <h2><a href="berita/?p=bimtek-penguatan-pelaksanaan-rb-bmkg&lang=ID"><?=$sliderpost['judul'];?></a></h2>
+                        <h2><a href="<?=$main_url;?>blog-detail.php?p=<?=$sliderpost['id'];?></a></h2>
                       </div>
                       <div class="ms-thumb">
                         <p><?=$sliderpost['judul'];?></p>
@@ -127,9 +129,9 @@ include "./partial_/navbar.php";
                 }} ?>
               </div>
             </div>
-            <a href="https://www.bmkg.go.id/cuaca/prakiraan-pon-indonesia.bmkg" target="_blank">
-              <img class="img-responsive" data-original="https://www.bmkg.go.id/asset/img/banner/PON-XX-2021.jpg" alt="">
-            </a>
+            <!-- <a href="https://www.bmkg.go.id/cuaca/prakiraan-pon-indonesia.bmkg" target="_blank">
+              <img onerror="this.style.display='none'"  class="img-responsive" data-original="https://www.bmkg.go.id/asset/img/banner/PON-XX-2021.jpg" alt="">
+            </a> -->
 
           </div>
 
@@ -146,10 +148,10 @@ include "./partial_/navbar.php";
                 <div class="press-release-home-bg margin-bottom-20">
                   <div class="blog-thumb margin-bottom-20">
                     <div class="blog-thumb-mkg">
-                      <img src="<?=$main_url."asset/images/post/".$datasiaran['thumb'];?>" >
+                      <img onerror="this.style.display='none'"  src="<?=$main_url."asset/images/post/".$datasiaran['thumb'];?>" >
                     </div>
                     <div class="blog-thumb-desc">
-                      <h3><a href="/press-release/?p=tidak-benar-gelombang-panas-sedang-terjadi-di-indonesia-bmkg-meminta-masyarakat-tidak-panik-dan-tetap-waspada&tag=press-release&lang=ID"><?=$datasiaran['judul'];?></a></h3>
+                      <h3><a href="<?=$main_url;?>blog-detail.php?p=<?=$datasiaran['id'];?>"><?=$datasiaran['judul'];?></a></h3>
                       <ul class="blog-thumb-info">
                         <li><?= date("d-m-Y",$created_at);?></li>
                       </ul>
@@ -159,7 +161,7 @@ include "./partial_/navbar.php";
                 <?php
               }} ?>
               <!--<a href="../rakorbangnas">
-              <img class="img-responsive md-margin-bottom-30" data-original="https://bmkg.go.id/asset/img/banner/Rakorbangnas-BMKG-2021.jpg" alt="">
+              <img onerror="this.style.display='none'"  class="img-responsive md-margin-bottom-30" data-original="https://bmkg.go.id/asset/img/banner/Rakorbangnas-BMKG-2021.jpg" alt="">
             </a>-->
 
             <!-- include file="includes/depan-section-banner-layanan.bmkg" -->
@@ -317,7 +319,7 @@ include "./partial_/navbar.php";
             </div>
             <div class="img-mkg-home-bg">
               <a href="https://cdn.bmkg.go.id/DataMKG/CEWS/pch/pch.bulan.1.cond1.png" class="fancybox img-hover-v1" rel="gallery" title="Informasi Ikilim">
-                <img class="img-responsive" data-original="https://cdn.bmkg.go.id/DataMKG/CEWS/pch/pch.bulan.1.cond1.png" alt="Informasi Ikilim">
+                <img onerror="this.style.display='none'"  class="img-responsive" data-original="https://cdn.bmkg.go.id/DataMKG/CEWS/pch/pch.bulan.1.cond1.png" alt="Informasi Ikilim">
               </a>
             </div>
           </div>
@@ -327,7 +329,7 @@ include "./partial_/navbar.php";
             </div>
             <div class="img-mkg-home-bg">
               <a href="https://cdn.bmkg.go.id/DataMKG/CEWS/hth/PetaMonitoringHariTanpaHujan-Indonesia.jpg?id=92920ymygfa0kkmr796i2kq" class="fancybox img-hover-v1" rel="gallery" title="Hari Tanpa Hujan">
-                <img class="img-responsive" data-original="https://cdn.bmkg.go.id/DataMKG/CEWS/hth/PetaMonitoringHariTanpaHujan-Indonesia.jpg?id=92920ymygfa0kkmr796i2kq" alt="Hari Tanpa Hujan">
+                <img onerror="this.style.display='none'"  class="img-responsive" data-original="https://cdn.bmkg.go.id/DataMKG/CEWS/hth/PetaMonitoringHariTanpaHujan-Indonesia.jpg?id=92920ymygfa0kkmr796i2kq" alt="Hari Tanpa Hujan">
               </a>
             </div>
           </div>
@@ -339,7 +341,7 @@ include "./partial_/navbar.php";
             </div>
             <div class="img-mkg-home-bg">
               <a href="https://inderaja.bmkg.go.id/IMAGE/HIMA/H08_EH_Jatim.png" class="fancybox img-hover-v1" rel="gallery" title="Citra Satelit">
-                <img class="img-responsive" data-original="https://inderaja.bmkg.go.id/IMAGE/HIMA/H08_EH_Jatim.png" alt="Citra Satelit">
+                <img onerror="this.style.display='none'"  class="img-responsive" data-original="https://inderaja.bmkg.go.id/IMAGE/HIMA/H08_EH_Jatim.png" alt="Citra Satelit">
               </a>
             </div>
           </div>
@@ -349,7 +351,7 @@ include "./partial_/navbar.php";
             </div>
             <div class="img-mkg-home-bg">
               <a href="https://peta-maritim.bmkg.go.id/render-static/w3g/2021/10/2021101912/surabaya/mwh_<?=date("Ymd");?>03.png" class="fancybox img-hover-v1" rel="gallery" title="Prakiraan Tinggi Gelombang">
-                <img class="img-responsive" data-original="https://peta-maritim.bmkg.go.id/render-static/w3g/2021/10/2021101912/surabaya/mwh_<?=date("Ymd");?>03.png" alt="Prakiraan Tinggi Gelombang">
+                <img onerror="this.style.display='none'"  class="img-responsive" data-original="https://peta-maritim.bmkg.go.id/render-static/w3g/2021/10/2021101912/surabaya/mwh_<?=date("Ymd");?>03.png" alt="Prakiraan Tinggi Gelombang">
               </a>
             </div>
           </div>
@@ -360,7 +362,7 @@ include "./partial_/navbar.php";
             </div>
             <div class="img-mkg-home-bg">
               <a href="https://cdn.bmkg.go.id/DataMKG/MEWS/angin/streamline_d1.jpg" class="fancybox img-hover-v1" rel="gallery" title="Prakiraan Angin">
-                <img class="img-responsive" data-original="https://cdn.bmkg.go.id/DataMKG/MEWS/angin/streamline_d1.jpg" alt="Prakiraan Angin">
+                <img onerror="this.style.display='none'"  class="img-responsive" data-original="https://cdn.bmkg.go.id/DataMKG/MEWS/angin/streamline_d1.jpg" alt="Prakiraan Angin">
               </a>
             </div>
           </div>
@@ -370,92 +372,13 @@ include "./partial_/navbar.php";
             </div>
             <div class="img-mkg-home-bg">
               <a href="https://cdn.bmkg.go.id/DataMKG/MEWS/spartan/36_indonesia_ffmc_01.png" class="fancybox img-hover-v1" rel="gallery" title="Potensi Kebakaran Hutan">
-                <img class="img-responsive" data-original="https://cdn.bmkg.go.id/DataMKG/MEWS/spartan/36_indonesia_ffmc_01.png" alt="Potensi Kebakaran Hutan">
+                <img onerror="this.style.display='none'"  class="img-responsive" data-original="https://cdn.bmkg.go.id/DataMKG/MEWS/spartan/36_indonesia_ffmc_01.png" alt="Potensi Kebakaran Hutan">
               </a>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-
-<!--    <section id="partner" class="margin-bottom-30">-->
-<!--      <div class="container">-->
-<!--        <div class="row">-->
-<!--          <div class="col-xs-12md-margin-bottom-20">-->
-<!--            <div class="banner-layanan-home owl-carousel-v1">-->
-<!--              <div class="owl-banner-layanan">-->
-                <!--<div class="col-md-12">
-<!--                <a href="#">-->
-<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/bersatu-lawan-terorisme.jpg" alt="Bersatu Lawan Terorisme">-->
-<!--              </a>-->
-<!--            </div>-->-->
-<!--            <div class="col-md-12">-->
-<!--              <a href="https://www.wmo.int/" target="_blank">-->
-<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/banner-wmo.jpg" alt="WMO">-->
-<!--              </a>-->
-<!--            </div>-->
-<!--            <div class="col-md-12">-->
-<!--              <a href="http://epengawasan.bmkg.go.id/wbs/" target="_blank">-->
-<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/banner-epengawasan.jpg" alt="E-Pengawasan">-->
-<!--              </a>-->
-<!--            </div>-->
-<!--            <div class="col-md-12">-->
-<!--              <a href="https://www.lapor.go.id/" target="_blank">-->
-<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/Lapor-UKP4.jpg" alt="LAPOR!">-->
-<!--              </a>-->
-<!--            </div>-->
-<!--            <div class="col-md-12">-->
-<!--              <a href="https://www.bmkg.go.id/rb" target="_blank">-->
-<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/banner-reformasi-birokrasi.jpg" alt="Reformasi Birokrasi BMKG">-->
-<!--              </a>-->
-<!--            </div>-->
-<!--            <div class="col-md-12">-->
-<!--              <a href="https://www.bmkg.go.id/profil/?p=stop-pungli-bmkg" target="_blank">-->
-<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/saber-pungli.jpg" alt="Saber Pungli">-->
-<!--              </a>-->
-<!--            </div>-->
-<!--            <div class="col-md-12">-->
-<!--              <a href="http://dataonline.bmkg.go.id/home" target="_blank">-->
-<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/banner_data_online.jpg" alt="Data Online">-->
-<!--              </a>-->
-<!--            </div>-->
-<!--            <div class="col-md-12">-->
-<!--              <a href="http://puslitbang.bmkg.go.id/jmg" target="_blank">-->
-<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/banner-journalMG.jpg" alt="Jurnal Meteorologi dan Geofisika">-->
-<!--              </a>-->
-<!--            </div>-->
-<!--            <div class="col-md-12">-->
-<!--              <a href="http://inatews.bmkg.go.id/new/query_gmpqc.php" target="_blank">-->
-<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/dataGempa.jpg" alt="Data Gempabumi">-->
-<!--              </a>-->
-<!--            </div>-->
-<!--            <div class="col-md-12">-->
-<!--              <a href="https://www.bmkg.go.id/geofisika-potensial/kalkulator-magnet-bumi.bmkg" target="_blank">-->
-<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/kalkulator-magnet.jpg" alt="Kalkulator Magnet Bumi">-->
-<!--              </a>-->
-<!--            </div>-->
-<!--            <div class="col-md-12">-->
-<!--              <a href="#">-->
-<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/mottobmkg.jpg" alt="Motto BMKG">-->
-<!--              </a>-->
-<!--            </div>-->
-<!--            <div class="col-md-12">-->
-<!--              <a href="https://www.bmkg.go.id/profil/?p=maklumat-pelayanan">-->
-<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/maklumatpelayanan.jpg" alt="Maklumat Pelayanan">-->
-<!--              </a>-->
-<!--            </div>-->
-<!--            <div class="col-md-12">-->
-<!--              <a href="http://lpse.bmkg.go.id" target="_blank">-->
-<!--                <img class="img-responsive" src="https://www.bmkg.go.id/asset/img/banner/lpse.jpg" alt="LPSE">-->
-<!--              </a>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
 <?php
 include "./partial_/footer.php";
 ?>

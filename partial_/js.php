@@ -5,6 +5,13 @@
 <script type="text/javascript" src="https://www.bmkg.go.id/asset/plugins/cumulonimbus.js" defer></script>
 <script>
   /*elnino*/
+  <?php
+if($mode == 'developt'){
+  echo "$('img').hide();";
+}else{
+  echo "$('img').show();";
+}
+  ?>
   var App = function() {
       function a() {
         jQuery(window).scroll(function() {

@@ -1,11 +1,30 @@
 <?php
 include_once("koneksi.php");
 session_start();
-$main_url = getSingleValDB("setting_web","id","1","main_url");
-$dashboard_url = getSingleValDB("setting_web","id","1","dashboard_url");
 $name_web = getSingleValDB("setting_web","id","1","name");
+$mode = getSingleValDB("setting_web","id","1","mode");
+$path_img = getSingleValDB("setting_web","id","1","path_img");
 $filename = '../../../asset/logs/counter.txt';	//mendefinisikan nama file untuk menyimpan counter
 
+$isSSL = function () {
+  if (!empty($_SERVER['https']))
+    return true;
+
+  if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')
+    return true;
+
+  if (!isset($_SERVER['SERVER_PORT']))
+    return false;
+
+  if ($_SERVER['SERVER_PORT'] == 443)
+    return true;
+
+  return false;
+};
+
+$prot = $isSSL() ? 'https://' : 'http://';
+$main_url = $prot.getSingleValDB("setting_web","id","1","main_url");
+$dashboard_url = $prot.getSingleValDB("setting_web","id","1","dashboard_url");
 
 function tanggal_indo($tanggal, $cetak_hari = false)
 {
@@ -134,6 +153,13 @@ function getSingleValDB($table, $where, $param, $target)
   $row = mysqli_fetch_assoc($q);
   return $row[$target];
 }
+function getSingleRowDB($table, $where, $param)
+{
+  global $koneksi;
+  $q = mysqli_query($koneksi, "SELECT * FROM `$table` WHERE `$where`='$param'");
+  $row = mysqli_fetch_assoc($q);
+  return $row;
+}
 
 function countDB($table, $where = null, $param = null)
 {
@@ -158,7 +184,7 @@ function countPresentase()
   }
 }
 //Query Function
-function getDataByTable($table = null,$limit = NULL)
+function getDataByTable($table = NULL,$limit = NULL,$condition = NULL)
 {
   if($table == null){
     $data = array(
@@ -168,11 +194,13 @@ function getDataByTable($table = null,$limit = NULL)
   }else{
     global $koneksi;
     $datalist = [];
-    if($limit == NULL){
-      $query = "SELECT * FROM `$table` order by `id` DESC";
-    }else{
-      $query = "SELECT * FROM `$table` order by `id` DESC limit $limit";
+    if($limit !== NULL){
+      $limit = "limit $limit";
     }
+    if($condition !== NULL){
+      $condition = "where ".$condition;
+    }
+    $query = "SELECT * FROM `$table` $condition order by `id` DESC $limit";
     $q = mysqli_query($koneksi, $query);
     while ($row = mysqli_fetch_assoc($q)) {
       array_push($datalist, $row);
@@ -523,7 +551,11 @@ function geticon($icon = null)
   if ($icon == null) {
     return json_encode(array('status' => false, 'message' => 'Cant Null'));
   } else {
-    $icondata = str_replace(" ", "_", strtolower($icon));
+    if($icon == "Berkabut"){
+      $icondata = "asap_kabut";
+    }else{
+      $icondata = str_replace(" ", "_", strtolower($icon));
+    }
     $img = "ic_$icondata" . "_" . getzone() . ".png";
     return $img;
   }
@@ -542,29 +574,35 @@ function getcard($kota = null)
           // {"jamCuaca":"2021-10-20 18:00:00","kodeCuaca":"1","cuaca":"Cerah Berawan","humidity":"90","tempC":"24","tempF":"75"}
           if (date('Y-m-d', strtotime($datanya['jamCuaca'])) == $datenow || $datanya['cuaca'] !== "") {
             $jam = date('H:i', strtotime($datanya['jamCuaca']));
-            $datafinal[] = "<div class='col-width-full id-501397'>
-            <div class='carousel-block-table prakicu-kota'>
+            // $datafinal = array();
+
+            if($datanya['kodeCuaca'] == "0"){
+              $datafinal[] = NULL;
+            }else{
+              $datafinal[] = "<div class='col-width-full id-501397'>
+              <div class='carousel-block-table prakicu-kota'>
               <div class='service-block bg-cuaca cerah-berawan-" . getzone($jam) . "'>
-                <h2 class='kota'>" . strtoupper($kota) . "</h2>
-                <p>$jam&nbsp;WIB</p>
-                <img src='./asset/cuaca/" . geticon($datanya['cuaca']) . "' alt='berawan'>
-                <p>" . $datanya['cuaca'] . "</p>
-                <h2 class='heading-md'>" . $datanya['tempC'] . "&deg;C</h2>
-                <a class='link-block' href='#'></a>
-                <svg class='more-arrow' width='20px' height='20px' viewBox='0 0 54 54' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
-                  <g id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'>
-                    <g id='right-arrow-svgrepo-com'>
-                      <g id='Group' fill='#FFA500'>
-                        <path d='M27,53 C12.641,53 1,41.359 1,27 C1,12.641 12.641,1 27,1 C41.359,1 53,12.641 53,27 C53,41.359 41.359,53 27,53 Z' id='Path'></path>
-                        <path d='M27,54 C12.112,54 0,41.888 0,27 C0,12.112 12.112,0 27,0 C41.888,0 54,12.112 54,27 C54,41.888 41.888,54 27,54 Z M27,2 C13.215,2 2,13.215 2,27 C2,40.785 13.215,52 27,52 C40.785,52 52,40.785 52,27 C52,13.215 40.785,2 27,2 Z' id='Shape' fill-rule='nonzero'></path>
-                      </g>
-                      <path d='M22.294,40 C22.038,40 21.782,39.902 21.587,39.707 C21.196,39.316 21.196,38.684 21.587,38.293 L32.88,27 L21.587,15.707 C21.196,15.316 21.196,14.684 21.587,14.293 C21.978,13.902 22.61,13.902 23.001,14.293 L34.499,25.791 C35.166,26.458 35.166,27.542 34.499,28.209 L23.001,39.707 C22.806,39.902 22.55,40 22.294,40 Z' id='Path' stroke='#FFFFFF' stroke-width='3' fill='#FFFFFF'></path>
-                    </g>
-                  </g>
-                </svg>
+              <h2 class='kota'>" . strtoupper($kota) . "</h2>
+              <p>$jam&nbsp;WIB</p>
+              <img src='./asset/cuaca/" . geticon($datanya['cuaca']) . "' alt='{$datanya['cuaca']}'>
+              <p>" . $datanya['cuaca'] . "</p>
+              <h2 class='heading-md'>{$datanya['tempC']}&deg;C</h2>
+              <a class='link-block' href='#'></a>
+              <svg class='more-arrow' width='20px' height='20px' viewBox='0 0 54 54' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+              <g id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'>
+              <g id='right-arrow-svgrepo-com'>
+              <g id='Group' fill='#FFA500'>
+              <path d='M27,53 C12.641,53 1,41.359 1,27 C1,12.641 12.641,1 27,1 C41.359,1 53,12.641 53,27 C53,41.359 41.359,53 27,53 Z' id='Path'></path>
+              <path d='M27,54 C12.112,54 0,41.888 0,27 C0,12.112 12.112,0 27,0 C41.888,0 54,12.112 54,27 C54,41.888 41.888,54 27,54 Z M27,2 C13.215,2 2,13.215 2,27 C2,40.785 13.215,52 27,52 C40.785,52 52,40.785 52,27 C52,13.215 40.785,2 27,2 Z' id='Shape' fill-rule='nonzero'></path>
+              </g>
+              <path d='M22.294,40 C22.038,40 21.782,39.902 21.587,39.707 C21.196,39.316 21.196,38.684 21.587,38.293 L32.88,27 L21.587,15.707 C21.196,15.316 21.196,14.684 21.587,14.293 C21.978,13.902 22.61,13.902 23.001,14.293 L34.499,25.791 C35.166,26.458 35.166,27.542 34.499,28.209 L23.001,39.707 C22.806,39.902 22.55,40 22.294,40 Z' id='Path' stroke='#FFFFFF' stroke-width='3' fill='#FFFFFF'></path>
+              </g>
+              </g>
+              </svg>
               </div>
-            </div>
-          </div>";
+              </div>
+              </div>";
+            }
           }
         }
         return implode("", $datafinal);
@@ -580,15 +618,30 @@ function getcard($kota = null)
 }
 function bojonegoro()
 {
-  return getcard('bojonegoro');
+  global $mode;
+  if($mode == "developt"){
+    return null;
+  }else{
+    return getcard('bojonegoro');
+  }
 }
 function tuban()
 {
-  return getcard('tuban');
+  global $mode;
+  if($mode == "developt"){
+    return null;
+  }else{
+    return getcard('tuban');
+  }
 }
 function lamongan()
 {
-  return getcard('lamongan');
+  global $mode;
+  if($mode == "developt"){
+    return null;
+  }else{
+    return getcard('lamongan');
+  }
 }
 
 
@@ -598,23 +651,34 @@ function lamongan()
 /* Response : {"sumberData":"BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)","gempaTerkini":{"detail":"Gempa Bumi yang baru saja terjadi","url":"http://gempa-api.herokuapp.com/gempa/terkini","shakemapBaseUrl":"https://data.bmkg.go.id/DataMKG/TEWS/[:idShakemap]"},"gempaDirasakan":{"detail":"15 gempa bumi terbaru yang dirasakan","url":"http://gempa-api.herokuapp.com/gempa/dirasakan"},"gempaMag5":{"detail":"15 gempa bumi dengan magnitudo > 5.0","url":"http://gempa-api.herokuapp.com/gempa/magnitudo"}} */
 function getgempaterkini()
 {
-  // $datagempaterkini = file_get_contents("https://gempa-api.herokuapp.com/gempa/terkini");
-  $datagempaterkini = curldata("https://gempa-api.herokuapp.com/gempa/terkini");
+  global $mode;
+  if($mode == "developt"){
+    return null;
+  }else{
+    $datagempaterkini = curldata("https://gempa-api.herokuapp.com/gempa/terkini");
+    return $datagempaterkini;
+  }
 
-  return $datagempaterkini;
 }
 function listgempadirasakan()
 {
-
-  $datagempadirasakan = curldata("http://gempa-api.herokuapp.com/gempa/dirasakan");
-  return $datagempadirasakan;
+  global $mode;
+  if($mode == "developt"){
+    return null;
+  }else{
+    $datagempadirasakan = curldata("http://gempa-api.herokuapp.com/gempa/dirasakan");
+    return $datagempadirasakan;
+  }
 }
 //End Get Data Gempa
 //Get Peringatan Dini gelombang
 function gelombangdini()
 {
-  // $getdata = file_get_contents("https://peta-maritim.bmkg.go.id/public_api/perairan/I.06_Perairan%20Tuban%20-%20Lamongan.json");
-  $getdata = curldata("https://peta-maritim.bmkg.go.id/public_api/perairan/I.06_Perairan%20Tuban%20-%20Lamongan.json");
-
-  return json_decode($getdata,true);
+  global $mode;
+  if($mode == "developt"){
+    return null;
+  }else{
+    $getdata = curldata("https://peta-maritim.bmkg.go.id/public_api/perairan/I.06_Perairan%20Tuban%20-%20Lamongan.json");
+    return json_decode($getdata,true);
+  }
 }
